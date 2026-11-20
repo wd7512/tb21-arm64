@@ -1,0 +1,122 @@
+import importlib.util
+import json
+import tomllib
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+TASK = "fix-git"
+IMAGE = "tb21-arm64-local/fix-git:dev"
+SPEC = importlib.util.spec_from_file_location("test_task", ROOT / "tools" / "test_task.py")
+test_task = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(test_task)
+
+
+def fake_run(rewards, missing=()):
+    calls = iter(rewards)
+
+    def run(command, check=False, **kwargs):
+        reward = next(calls)
+        job_name = command[command.index("--job-name") + 1]
+        jobs_dir = Path(command[command.index("-o") + 1])
+        if job_name in missing:
+            return None
+        task_name = f"terminal-bench/{TASK}"
+        exception_type = None
+        payload = {
+            "task_name": task_name,
+            "verifier_result": None if exception_type else {"rewards": {"reward": reward}},
+            "exception_info": (
+                {"exception_type": exception_type, "exception_message": "fake failure"}
+                if exception_type
+                else None
+            ),
+        }
+        result_dir = jobs_dir / job_name / f"{task_name}__fake"
+        result_dir.mkdir(parents=True)
+        (result_dir / "result.json").write_text(json.dumps(payload))
+        return None
+
+    return run
+
+
+def test_all_pass_and_rewrite_only_temporary_copy(tmp_path):
+    original = (ROOT / TASK / "task.toml").read_text()
+    result = test_task.run_test(
+        TASK,
+        IMAGE,
+        jobs_dir=tmp_path / "jobs",
+        out=tmp_path / "report.json",
+        run=fake_run([1.0, 1.0, 1.0, 0.0]),
+    )
+    assert result["verdict"] == "verified"
+    assert result["reason"] is None
+    assert len(result["oracle"]) == 3
+    assert result["nop"]["reward"] == 0.0
+    assert json.loads((tmp_path / "report.json").read_text()) == result
+    assert (ROOT / TASK / "task.toml").read_text() == original
+    assert tomllib.loads(original)["environment"]["docker_image"] != IMAGE
+
+
+def test_oracle_zero_is_failing(tmp_path):
+    result = test_task.run_test(
+        TASK,
+        IMAGE,
+        jobs_dir=tmp_path / "jobs",
+        out=tmp_path / "report.json",
+        run=fake_run([1.0, 0.0, 1.0, 0.0]),
+    )
+    assert result["verdict"] == "failing"
+    assert result["reason"] == "oracle run 2 reward 0.0"
+
+
+def test_oracle_exception_is_failing(tmp_path):
+    def run(command, check=False, **kwargs):
+        job_name = command[command.index("--job-name") + 1]
+        jobs_dir = Path(command[command.index("-o") + 1])
+        task_name = f"terminal-bench/{TASK}"
+        exception_type = "EnvironmentStartTimeoutError" if "oracle-1-" in job_name else None
+        payload = {
+            "task_name": task_name,
+            "verifier_result": None if exception_type else {"rewards": {"reward": 1.0}},
+            "exception_info": (
+                {"exception_type": exception_type, "exception_message": "fake failure"}
+                if exception_type
+                else None
+            ),
+        }
+        result_dir = jobs_dir / job_name / f"{task_name}__fake"
+        result_dir.mkdir(parents=True)
+        (result_dir / "result.json").write_text(json.dumps(payload))
+
+    result = test_task.run_test(
+        TASK, IMAGE, jobs_dir=tmp_path / "jobs", out=tmp_path / "report.json", run=run
+    )
+    assert result["verdict"] == "failing"
+    assert result["oracle"][0]["exception_type"] == "EnvironmentStartTimeoutError"
+    assert result["reason"] == "oracle run 1 exception EnvironmentStartTimeoutError"
+
+
+def test_nop_one_is_failing(tmp_path):
+    result = test_task.run_test(
+        TASK,
+        IMAGE,
+        jobs_dir=tmp_path / "jobs",
+        out=tmp_path / "report.json",
+        run=fake_run([1.0, 1.0, 1.0, 1.0]),
+    )
+    assert result["verdict"] == "failing"
+    assert result["reason"] == "nop reward 1.0"
+
+
+def test_missing_result_exits_two(tmp_path):
+    def run(command, check=False, **kwargs):
+        return None
+
+    try:
+        test_task.run_test(
+            TASK, IMAGE, jobs_dir=tmp_path / "jobs", out=tmp_path / "report.json", run=run
+        )
+    except SystemExit as error:
+        assert error.code == 2
+    else:
+        raise AssertionError("missing result.json must exit 2")
