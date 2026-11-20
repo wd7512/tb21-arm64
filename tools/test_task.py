@@ -64,7 +64,7 @@ def _run_harbor(task_folder, agent, jobs_dir, job_name, run):
         "-q",
     ]
     run(command, check=False)
-    results = list((jobs_dir / job_name).rglob("result.json"))
+    results = list((jobs_dir / job_name).glob("*/result.json"))
     if len(results) != 1:
         raise SystemExit(2)
     result = json.loads(results[0].read_text(encoding="utf-8"))

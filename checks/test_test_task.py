@@ -31,9 +31,10 @@ def fake_run(rewards, missing=()):
                 else None
             ),
         }
-        result_dir = jobs_dir / job_name / f"{task_name}__fake"
+        result_dir = jobs_dir / job_name / f"{TASK}__fake"
         result_dir.mkdir(parents=True)
         (result_dir / "result.json").write_text(json.dumps(payload))
+        (jobs_dir / job_name / "result.json").write_text(json.dumps({"n_total_trials": 1}))
         return None
 
     return run
@@ -84,9 +85,10 @@ def test_oracle_exception_is_failing(tmp_path):
                 else None
             ),
         }
-        result_dir = jobs_dir / job_name / f"{task_name}__fake"
+        result_dir = jobs_dir / job_name / f"{TASK}__fake"
         result_dir.mkdir(parents=True)
         (result_dir / "result.json").write_text(json.dumps(payload))
+        (jobs_dir / job_name / "result.json").write_text(json.dumps({"n_total_trials": 1}))
 
     result = test_task.run_test(
         TASK, IMAGE, jobs_dir=tmp_path / "jobs", out=tmp_path / "report.json", run=run
