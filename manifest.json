@@ -508,9 +508,7 @@
     },
     "hf-model-inference": {
       "evidence": null,
-      "fix_classes": [
-        "drift"
-      ],
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -704,9 +702,7 @@
     },
     "mteb-leaderboard": {
       "evidence": null,
-      "fix_classes": [
-        "drift"
-      ],
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -718,9 +714,7 @@
     },
     "mteb-retrieve": {
       "evidence": null,
-      "fix_classes": [
-        "drift"
-      ],
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -928,9 +922,7 @@
     },
     "pytorch-model-recovery": {
       "evidence": null,
-      "fix_classes": [
-        "drift"
-      ],
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
