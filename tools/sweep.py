@@ -30,7 +30,9 @@ def image_for(task, manifest):
     return f"tb21-arm64-local/{task}:sweep", "build"
 
 
-def sweep_one(task, manifest, out, *, run=subprocess.run, test=None, runs=3, prune=False):
+def sweep_one(
+    task, manifest, out, *, run=subprocess.run, test=None, runs=3, prune=False, jobs_dir=None
+):
     test = test or _load_test_task()
     image, source = image_for(task, manifest)
     started = time.monotonic()
@@ -54,7 +56,7 @@ def sweep_one(task, manifest, out, *, run=subprocess.run, test=None, runs=3, pru
                     image,
                     runs=runs,
                     out=out / f"{task}.test.json",
-                    jobs_dir=out / "jobs",
+                    jobs_dir=jobs_dir or out / "jobs",
                     run=logged,
                 )
                 verdict, reason = report["verdict"], report["reason"]
@@ -87,6 +89,7 @@ def main(argv=None):
     parser.add_argument("--jobs", type=int, default=1)
     parser.add_argument("--runs", type=int, default=3)
     parser.add_argument("--out", default=str(ROOT / "reports" / "local" / "sweep"))
+    parser.add_argument("--jobs-dir", help="Harbor job folders (default: OUT/jobs)")
     parser.add_argument(
         "--prune", action="store_true", help="remove each built image after its test"
     )
@@ -97,7 +100,13 @@ def main(argv=None):
         parser.error(f"unknown tasks: {' '.join(unknown)}")
     tasks = args.tasks or sorted(manifest["tasks"])
     rows = sweep(
-        tasks, manifest, Path(args.out).resolve(), jobs=args.jobs, runs=args.runs, prune=args.prune
+        tasks,
+        manifest,
+        Path(args.out).resolve(),
+        jobs=args.jobs,
+        runs=args.runs,
+        prune=args.prune,
+        jobs_dir=Path(args.jobs_dir).resolve() if args.jobs_dir else None,
     )
     return 0 if all(row["verdict"] == "verified" for row in rows) else 1
 

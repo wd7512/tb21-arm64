@@ -28,6 +28,7 @@ def fake_test(verdict="verified", reason=None, exit_code=None):
 
     def test(task, image, **kwargs):
         seen.append((task, image))
+        test.jobs_dir = kwargs["jobs_dir"]
         if exit_code is not None:
             raise SystemExit(exit_code)
         return {"verdict": verdict, "reason": reason}
@@ -87,3 +88,14 @@ def test_sweep_skips_tasks_with_a_row(tmp_path):
     seen, test = fake_test()
     sweep.sweep([SINGLE_ARCH, MULTI_ARCH], MANIFEST, tmp_path, jobs=1, run=run, test=test)
     assert [task for task, _ in seen] == [MULTI_ARCH]
+
+
+def test_jobs_dir_defaults_under_out_and_can_move(tmp_path):
+    _, run = recorder()
+    _, test = fake_test()
+    sweep.sweep_one(SINGLE_ARCH, MANIFEST, tmp_path / "a", run=run, test=test)
+    assert test.jobs_dir == tmp_path / "a" / "jobs"
+    sweep.sweep_one(
+        SINGLE_ARCH, MANIFEST, tmp_path / "b", run=run, test=test, jobs_dir=tmp_path / "j"
+    )
+    assert test.jobs_dir == tmp_path / "j"
