@@ -10,7 +10,7 @@ compares it with the upstream amd64 image, fixes what fails, and publishes the i
 ## What differs from upstream
 
 The first commit imports the task folders unchanged. Every later change to a task is its own commit
-and is described in `fixes/<task>.md`, in one of three classes:
+and is described in `fixes/<task>.md`, in one or more of three classes; the base image pins of all tasks are listed together in `fixes/base-pins.md`:
 
 | Class | Meaning |
 | --- | --- |

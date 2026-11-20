@@ -7,8 +7,9 @@ runs from a native arm64 image published at `ghcr.io/wd7512/tb21-arm64/<task>`.
 
 - `<task>/`: one Harbor task folder per task, at the repository root, because hrr reads a git
   task source as `<repo>/<task>`. These folders are benchmark content: change one only for a fix
-  that is recorded in `fixes/<task>.md`.
-- `fixes/<task>.md`: for each changed task, what changed, why, the class and the evidence.
+  that is recorded in `fixes/<task>.md`, or, for a base image pin, in `fixes/base-pins.md`.
+- `fixes/<task>.md`: for each task changed beyond its base pin, what changed, why, the class and the evidence.
+- `fixes/base-pins.md`: one table of every base image pin (old and new `FROM`, match quality, evidence).
 - `manifest.json`: for each task, the upstream package and image, our image digest and the status.
 - `tools/`: scripts that compare, build and test images.
 - `checks/`: pytest tests for `tools/` and for repository invariants.
