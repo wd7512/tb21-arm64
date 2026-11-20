@@ -1,7 +1,7 @@
 # tb21-arm64
 
-Native arm64 images for the 89 tasks of [Terminal-Bench 2.1](https://github.com/harbor-framework/terminal-bench-2).
-The upstream task images are amd64-only. This repository builds an arm64 image for each task,
+Native arm64 images for the 89 tasks of [Terminal-Bench 2.1](https://github.com/harbor-framework/terminal-bench-2-1).
+Most upstream task images (85 of 89) are amd64-only. This repository builds an arm64 image for each task,
 compares it with the upstream amd64 image, fixes what fails, and publishes the images at
 `ghcr.io/wd7512/tb21-arm64/<task>`.
 
@@ -17,6 +17,10 @@ and is described in `fixes/<task>.md`, in one of three classes:
 | `port` | arm64 forces the change, for example an x86-only binary download. |
 | `drift` | Rebuilding the upstream Dockerfile today no longer reproduces the upstream image, so the fix pins to, or copies from, that image. |
 | `defect` | The task also fails on the upstream amd64 image, and is fixed here. A task fixed for a defect is not the same task as upstream, so compare its results with upstream results with care. |
+
+Hosts that build task images from source can use
+[AI-Harness-Evals/terminal-bench-2-1-native](https://github.com/AI-Harness-Evals/terminal-bench-2-1-native)
+instead, which changes only fix-git's clone source.
 
 ## Status
 

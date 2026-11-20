@@ -8,7 +8,7 @@ import subprocess
 import tarfile
 import tempfile
 from email.parser import Parser
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 
 SECTIONS = ("config", "dpkg", "apk", "python", "npm", "files")
 
@@ -254,6 +254,7 @@ def compare_images(upstream_ref, candidate_ref, out_path, workdir=None, run=subp
         },
         "differences": differences,
     }
+    Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as output:
         json.dump(report, output, indent=2, sort_keys=True)
         output.write("\n")
