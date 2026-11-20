@@ -125,7 +125,7 @@ def build_manifest(root):
             },
             "image": None,
             "status": "untested",
-            "fix_class": None,
+            "fix_classes": [],
             "evidence": None,
         }
     return {

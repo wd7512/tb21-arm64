@@ -7,7 +7,7 @@ import pytest
 
 DIGEST = re.compile(r"sha256:[0-9a-f]{64}\Z")
 STATUSES = {"untested", "failing", "verified-ci", "verified-isambard"}
-FIX_CLASSES = {None, "port", "drift", "defect"}
+FIX_CLASSES = {"port", "drift", "defect"}
 
 
 def check_manifest(manifest_path, root):
@@ -25,7 +25,10 @@ def check_manifest(manifest_path, root):
         assert DIGEST.fullmatch(upstream["package_digest"]), f"{name}: invalid package_digest"
         assert DIGEST.fullmatch(upstream["image_digest"]), f"{name}: invalid image_digest"
         assert record["status"] in STATUSES, f"{name}: invalid status"
-        assert record["fix_class"] in FIX_CLASSES, f"{name}: invalid fix_class"
+        classes = record["fix_classes"]
+        assert isinstance(classes, list), f"{name}: invalid fix_classes"
+        assert set(classes) <= FIX_CLASSES, f"{name}: invalid fix_classes"
+        assert classes == sorted(set(classes)), f"{name}: fix_classes not sorted"
         if record["image"] is None:
             task = tomllib.loads((Path(root) / name / "task.toml").read_text())
             assert task["environment"]["docker_image"] == upstream["image"], (
@@ -61,9 +64,21 @@ def test_manifest_invariants(tmp_path):
         ),
         (
             lambda data: data["tasks"][next(iter(data["tasks"]))].__setitem__(
-                "fix_class", "unknown"
+                "fix_classes", ["unknown"]
             ),
-            "invalid fix_class",
+            "invalid fix_classes",
+        ),
+        (
+            lambda data: data["tasks"][next(iter(data["tasks"]))].__setitem__(
+                "fix_classes", ["port", "drift"]
+            ),
+            "fix_classes not sorted",
+        ),
+        (
+            lambda data: data["tasks"][next(iter(data["tasks"]))].__setitem__(
+                "fix_classes", "drift"
+            ),
+            "invalid fix_classes",
         ),
         (
             lambda data: data["tasks"][next(iter(data["tasks"]))]["upstream"].__setitem__(

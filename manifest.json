@@ -4,7 +4,7 @@
   "tasks": {
     "adaptive-rejection-sampler": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -16,7 +16,7 @@
     },
     "bn-fit-modify": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -28,7 +28,7 @@
     },
     "break-filter-js-from-html": {
       "evidence": null,
-      "fix_class": "drift",
+      "fix_classes": ["drift"],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -40,7 +40,7 @@
     },
     "build-cython-ext": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -52,7 +52,7 @@
     },
     "build-pmars": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -64,7 +64,7 @@
     },
     "build-pov-ray": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -76,7 +76,7 @@
     },
     "caffe-cifar-10": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -88,7 +88,7 @@
     },
     "cancel-async-tasks": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -100,7 +100,7 @@
     },
     "chess-best-move": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -112,7 +112,7 @@
     },
     "circuit-fibsqrt": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -124,7 +124,7 @@
     },
     "cobol-modernization": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -136,7 +136,7 @@
     },
     "code-from-image": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -148,7 +148,7 @@
     },
     "compile-compcert": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -160,7 +160,7 @@
     },
     "configure-git-webserver": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -172,7 +172,7 @@
     },
     "constraints-scheduling": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -184,7 +184,7 @@
     },
     "count-dataset-tokens": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -196,7 +196,7 @@
     },
     "crack-7z-hash": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -208,7 +208,7 @@
     },
     "custom-memory-heap-crash": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -220,7 +220,7 @@
     },
     "db-wal-recovery": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -232,7 +232,7 @@
     },
     "distribution-search": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -244,7 +244,7 @@
     },
     "dna-assembly": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -256,7 +256,7 @@
     },
     "dna-insert": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -268,7 +268,7 @@
     },
     "extract-elf": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -280,7 +280,7 @@
     },
     "extract-moves-from-video": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -292,7 +292,7 @@
     },
     "feal-differential-cryptanalysis": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -304,7 +304,7 @@
     },
     "feal-linear-cryptanalysis": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -316,7 +316,7 @@
     },
     "filter-js-from-html": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -328,7 +328,7 @@
     },
     "financial-document-processor": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -340,7 +340,7 @@
     },
     "fix-code-vulnerability": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -352,7 +352,7 @@
     },
     "fix-git": {
       "evidence": null,
-      "fix_class": "drift",
+      "fix_classes": ["drift"],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -364,7 +364,7 @@
     },
     "fix-ocaml-gc": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -376,7 +376,7 @@
     },
     "gcode-to-text": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -388,7 +388,7 @@
     },
     "git-leak-recovery": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -400,7 +400,7 @@
     },
     "git-multibranch": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -412,7 +412,7 @@
     },
     "gpt2-codegolf": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -424,7 +424,7 @@
     },
     "headless-terminal": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -436,7 +436,7 @@
     },
     "hf-model-inference": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -448,7 +448,7 @@
     },
     "install-windows-3.11": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -460,7 +460,7 @@
     },
     "kv-store-grpc": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -472,7 +472,7 @@
     },
     "large-scale-text-editing": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -484,7 +484,7 @@
     },
     "largest-eigenval": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -496,7 +496,7 @@
     },
     "llm-inference-batching-scheduler": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -508,7 +508,7 @@
     },
     "log-summary-date-ranges": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -520,7 +520,7 @@
     },
     "mailman": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -532,7 +532,7 @@
     },
     "make-doom-for-mips": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -544,7 +544,7 @@
     },
     "make-mips-interpreter": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -556,7 +556,7 @@
     },
     "mcmc-sampling-stan": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -568,7 +568,7 @@
     },
     "merge-diff-arc-agi-task": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -580,7 +580,7 @@
     },
     "model-extraction-relu-logits": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -592,7 +592,7 @@
     },
     "modernize-scientific-stack": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -604,7 +604,7 @@
     },
     "mteb-leaderboard": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -616,7 +616,7 @@
     },
     "mteb-retrieve": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -628,7 +628,7 @@
     },
     "multi-source-data-merger": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -640,7 +640,7 @@
     },
     "nginx-request-logging": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -652,7 +652,7 @@
     },
     "openssl-selfsigned-cert": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -664,7 +664,7 @@
     },
     "overfull-hbox": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -676,7 +676,7 @@
     },
     "password-recovery": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -688,7 +688,7 @@
     },
     "path-tracing": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -700,7 +700,7 @@
     },
     "path-tracing-reverse": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -712,7 +712,7 @@
     },
     "polyglot-c-py": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -724,7 +724,7 @@
     },
     "polyglot-rust-c": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -736,7 +736,7 @@
     },
     "portfolio-optimization": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -748,7 +748,7 @@
     },
     "protein-assembly": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -760,7 +760,7 @@
     },
     "prove-plus-comm": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -772,7 +772,7 @@
     },
     "pypi-server": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -784,7 +784,7 @@
     },
     "pytorch-model-cli": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -796,7 +796,7 @@
     },
     "pytorch-model-recovery": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -808,7 +808,7 @@
     },
     "qemu-alpine-ssh": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -820,7 +820,7 @@
     },
     "qemu-startup": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -832,7 +832,7 @@
     },
     "query-optimize": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -844,7 +844,7 @@
     },
     "raman-fitting": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -856,7 +856,7 @@
     },
     "regex-chess": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -868,7 +868,7 @@
     },
     "regex-log": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -880,7 +880,7 @@
     },
     "reshard-c4-data": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -892,7 +892,7 @@
     },
     "rstan-to-pystan": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -904,7 +904,7 @@
     },
     "sam-cell-seg": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -916,7 +916,7 @@
     },
     "sanitize-git-repo": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -928,7 +928,7 @@
     },
     "schemelike-metacircular-eval": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -940,7 +940,7 @@
     },
     "sparql-university": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -952,7 +952,7 @@
     },
     "sqlite-db-truncate": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -964,7 +964,7 @@
     },
     "sqlite-with-gcov": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -976,7 +976,7 @@
     },
     "torch-pipeline-parallelism": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -988,7 +988,7 @@
     },
     "torch-tensor-parallelism": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1000,7 +1000,7 @@
     },
     "train-fasttext": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1012,7 +1012,7 @@
     },
     "tune-mjcf": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1024,7 +1024,7 @@
     },
     "video-processing": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1036,7 +1036,7 @@
     },
     "vulnerable-secret": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1048,7 +1048,7 @@
     },
     "winning-avg-corewars": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
@@ -1060,7 +1060,7 @@
     },
     "write-compressor": {
       "evidence": null,
-      "fix_class": null,
+      "fix_classes": [],
       "image": null,
       "status": "untested",
       "upstream": {
