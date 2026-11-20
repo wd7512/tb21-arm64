@@ -1,0 +1,42 @@
+[project]
+name = "tb21-arm64"
+version = "0.0.0"
+description = "Native arm64 images and task folders for Terminal-Bench 2.1"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "ruff==0.16.5",
+    "wills-agentic-tools",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+wills-agentic-tools = { git = "https://github.com/wd7512/wills-agentic-tools", tag = "v0.2.1" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["*/environment", "*/solution", "*/tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["checks"]
+
+[tool.devtools.delegate]
+gate_command = "sh -c 'uv run ruff check tools checks && uv run ruff format --check tools checks && uv run pytest -q && shellcheck tools/*.sh'"
+base = "origin/main"
+extra_rules = [
+    "Read `AGENTS.md` and your brief before anything else. If they disagree, or the brief is wrong about existing files, stop and report.",
+    "Make no design decisions. A missing detail is a reason to stop and report, not to choose.",
+    "Never edit a task folder unless the brief names it; task folders are benchmark content.",
+    "Do not add a dependency, a command-line flag, an environment variable or a file format field that the brief does not name.",
+    "Never push images or contact a registry except to pull public images.",
+]

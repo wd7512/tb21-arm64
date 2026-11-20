@@ -1,0 +1,17 @@
+tb21-arm64
+Copyright 2026 William Dennis
+
+This repository contains the task folders of Terminal-Bench 2.1, from
+https://github.com/harbor-framework/terminal-bench-2 and the Harbor registry
+dataset terminal-bench/terminal-bench-2-1, licensed under the Apache License,
+Version 2.0. The task authors are named in each task's task.toml.
+
+Modifications: the first commit imports the 89 task folders unchanged. Every
+later change to a task folder is its own commit, and is described in
+fixes/<task>.md, with its reason and class (port, drift or defect). Each
+modified task.toml points at an image built from this repository.
+
+The container images built from these folders contain third-party software
+(operating system packages, language packages, datasets and other files) under
+their own licences, as do the upstream Terminal-Bench images they are built to
+match.
