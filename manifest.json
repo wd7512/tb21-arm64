@@ -28,7 +28,7 @@
     },
     "break-filter-js-from-html": {
       "evidence": null,
-      "fix_class": null,
+      "fix_class": "drift",
       "image": null,
       "status": "untested",
       "upstream": {
