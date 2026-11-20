@@ -10,6 +10,7 @@ dependencies = []
 dev = [
     "pytest==9.1.1",
     "ruff==0.16.5",
+    "shellcheck-py==0.11.0.1",
     "wills-agentic-tools",
 ]
 
@@ -31,7 +32,7 @@ select = ["E", "F", "I", "B", "UP"]
 testpaths = ["checks"]
 
 [tool.devtools.delegate]
-gate_command = "sh -c 'uv run ruff check tools checks && uv run ruff format --check tools checks && uv run pytest -q && shellcheck tools/*.sh'"
+gate_command = "sh -c 'uv run ruff check tools checks && uv run ruff format --check tools checks && uv run pytest -q && { set -- tools/*.sh; [ ! -e \"$1\" ] || uv run shellcheck \"$@\"; }'"
 base = "origin/main"
 extra_rules = [
     "Read `AGENTS.md` and your brief before anything else. If they disagree, or the brief is wrong about existing files, stop and report.",
