@@ -1,0 +1,19 @@
+{
+  "artifacts": {
+    "brief": ".agent/brief.md",
+    "gate_log": ".agent/gate.log"
+  },
+  "backend": "codex",
+  "base": "main",
+  "fix_rounds": 1,
+  "gate_rc": 0,
+  "head": "d671a917db582cbca070bf1000d38f0c1059feb3",
+  "model": "codex:gpt-6-luna",
+  "name": "tb-l4-ci",
+  "r": 2,
+  "rounds": 2,
+  "sessionID": "01a1fb6c-6c0b-79c0-be1f-693f7d9b90b1",
+  "state": "gate-green",
+  "variant": "high",
+  "worktree": ".worktrees/w-tb-l4-ci"
+}

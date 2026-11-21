@@ -29,6 +29,16 @@ instead, which changes only fix-git's clone source.
 A task is `verified-ci` when, on the CI arm64 runner, the oracle passes 3 sequential runs out of 3
 and the `nop` agent scores 0. `manifest.json` records each task's status and evidence.
 
+## CI
+
+Pull requests run the repository gate and build and verify changed tasks on arm64 runners. Changes
+to shared build or configuration files run a three-task canary set. Pushes to `main` run the same
+checks for changed tasks. A manual workflow dispatch can run every non-skipped task by setting
+`all` to true. Image publishing is off until the repository variable `TB21_PUBLISH` is set to
+`true`. Then each task job pushes the exact image it tested to
+`ghcr.io/wd7512/tb21-arm64/<task>:<upstream tag>`, whatever its verdict: failing images are
+published too, and `manifest.json` records each task's status.
+
 ## Use with harbor-research-runner
 
 Point the job file's task source at a commit of this repository:
