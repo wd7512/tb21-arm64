@@ -1,5 +1,5 @@
 import json
-import shutil
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -13,9 +13,19 @@ RUN_URL = "https://github.com/wd7512/tb21-arm64/actions/runs/123"
 
 def fixture_repo(tmp_path):
     (tmp_path / TASK).mkdir()
-    shutil.copyfile(REPO / TASK / "task.toml", tmp_path / TASK / "task.toml")
     manifest = json.loads((REPO / "manifest.json").read_text())
-    manifest["tasks"] = {TASK: manifest["tasks"][TASK]}
+    entry = manifest["tasks"][TASK]
+    upstream = entry["upstream"]["image"]
+    task_toml = re.sub(
+        r'^docker_image = ".*"$',
+        f'docker_image = "{upstream}"',
+        (REPO / TASK / "task.toml").read_text(),
+        count=1,
+        flags=re.MULTILINE,
+    )
+    (tmp_path / TASK / "task.toml").write_text(task_toml)
+    entry.update(image=None, status="untested", evidence=None)
+    manifest["tasks"] = {TASK: entry}
     (tmp_path / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     reports = tmp_path / "publish"
     reports.mkdir()
