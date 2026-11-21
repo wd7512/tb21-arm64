@@ -7,13 +7,13 @@
   "base": "main",
   "fix_rounds": 1,
   "gate_rc": 0,
-  "head": "3c1afe72eaef3b52d17958ad71e09a426165e70c",
+  "head": "d671a917db582cbca070bf1000d38f0c1059feb3",
   "model": "codex:gpt-6-luna",
-  "name": "tb-l7-record",
+  "name": "tb-l4-ci",
   "r": 2,
   "rounds": 2,
-  "sessionID": "01a1fba0-07b3-7b73-aae3-58aafa8a7835",
+  "sessionID": "01a1fb6c-6c0b-79c0-be1f-693f7d9b90b1",
   "state": "gate-green",
   "variant": "high",
-  "worktree": ".worktrees/w-tb-l7-record"
+  "worktree": ".worktrees/w-tb-l4-ci"
 }
