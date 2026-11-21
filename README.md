@@ -38,6 +38,7 @@ checks for changed tasks. A manual workflow dispatch can run every non-skipped t
 `true`. Then each task job on `main` (push or manual dispatch) pushes the exact image it tested to
 `ghcr.io/wd7512/tb21-arm64/<task>:<upstream tag>`, whatever its verdict: failing images are
 published too, and `manifest.json` records each task's status.
+CI records published image digests and task verdicts in `task.toml` and `manifest.json`.
 
 ## Use with harbor-research-runner
 

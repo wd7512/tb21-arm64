@@ -95,13 +95,93 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           built="tb21-arm64-local/${TASK}:sweep"
-          if ! docker image inspect "$built" >/dev/null 2>&1; then
+          image_ref=""
+          push_failed=0
+          if docker image inspect "$built" >/dev/null 2>&1; then
+            tag=$(uv run python -c 'import json, os; print(json.load(open("manifest.json"))["tasks"][os.environ["TASK"]]["upstream"]["image"].rsplit(":", 1)[1])')
+            image="ghcr.io/wd7512/tb21-arm64/${TASK}:${tag}"
+            echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+            docker tag "$built" "$image"
+            if docker push "$image"; then
+              if image_ref=$(docker inspect --format '{{index .RepoDigests 0}}' "$image"); then
+                :
+              else
+                echo "could not inspect published digest for $image"
+                push_failed=1
+              fi
+            else
+              echo "failed to publish $image"
+              push_failed=1
+            fi
+          else
             echo "no image built for $TASK (build failed, or the task uses upstream's arm64 image)"
+          fi
+          uv run python - "$TASK" "$image_ref" <<'PY'
+          import json
+          import os
+          import sys
+          from pathlib import Path
+
+          task, image = sys.argv[1:]
+          report = json.loads(Path("reports/ci", f"{task}.sweep.json").read_text())
+          publish = {
+              "task": task,
+              "image": image or None,
+              "verdict": report["verdict"],
+              "reason": report["reason"],
+              "run_url": f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+          }
+          path = Path("reports/ci", f"{task}.publish.json")
+          path.write_text(json.dumps(publish, indent=2) + "\n")
+          PY
+          exit "$push_failed"
+      - uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: publish-${{ matrix.task }}
+          path: reports/ci/${{ matrix.task }}.publish.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+  record:
+    needs: [plan, task]
+    if: >-
+      always() &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      github.ref == 'refs/heads/main' &&
+      vars.TB21_PUBLISH == 'true'
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4.3.0
+        with:
+          pattern: publish-*
+          path: reports/published
+          merge-multiple: true
+          if-no-artifact-found: ignore
+      - uses: astral-sh/setup-uv@v6.6.1
+      - name: Record published images and verdicts
+        run: uv run python tools/record_ci.py reports/published
+      - name: Commit and push records
+        run: |
+          if git diff --quiet; then
+            echo "No CI records changed"
             exit 0
           fi
-          tag=$(uv run python -c 'import json, os; print(json.load(open("manifest.json"))["tasks"][os.environ["TASK"]]["upstream"]["image"].rsplit(":", 1)[1])')
-          image="ghcr.io/wd7512/tb21-arm64/${TASK}:${tag}"
-          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
-          docker tag "$built" "$image"
-          docker push "$image"
-      # TODO: write the published digest and the verdict back into task.toml and manifest.json.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json */task.toml
+          git commit -m "ci: record published images and verdicts (run ${GITHUB_RUN_ID})"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase origin main
+            fi
+          done
+          exit 1
