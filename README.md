@@ -12,6 +12,8 @@ compares it with the upstream amd64 image, fixes what fails, and publishes the i
 The first commit imports the task folders unchanged. Every later change to a task is its own commit
 and is described in `fixes/<task>.md`, in one or more of three classes; the base image pins of all tasks are listed together in `fixes/base-pins.md`:
 
+Every image is native `linux/arm64`; no task builds from, copies from, or runs an amd64 image, and `tools/test_task.py` refuses other architectures; the two QEMU tasks are skipped (`status: skipped`).
+
 | Class | Meaning |
 | --- | --- |
 | `port` | arm64 forces the change, for example an x86-only binary download. |

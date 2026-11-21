@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import subprocess
 import tomllib
 from pathlib import Path
 
@@ -15,6 +16,8 @@ def fake_run(rewards, missing=()):
     calls = iter(rewards)
 
     def run(command, check=False, **kwargs):
+        if command[:3] == ["docker", "image", "inspect"]:
+            return subprocess.CompletedProcess(command, 0, stdout="linux/arm64\n", stderr="")
         reward = next(calls)
         job_name = command[command.index("--job-name") + 1]
         jobs_dir = Path(command[command.index("-o") + 1])
@@ -72,6 +75,8 @@ def test_oracle_zero_is_failing(tmp_path):
 
 def test_oracle_exception_is_failing(tmp_path):
     def run(command, check=False, **kwargs):
+        if command[:3] == ["docker", "image", "inspect"]:
+            return subprocess.CompletedProcess(command, 0, stdout="linux/arm64\n", stderr="")
         job_name = command[command.index("--job-name") + 1]
         jobs_dir = Path(command[command.index("-o") + 1])
         task_name = f"terminal-bench/{TASK}"
@@ -112,7 +117,9 @@ def test_nop_one_is_failing(tmp_path):
 
 def test_missing_result_exits_two(tmp_path):
     def run(command, check=False, **kwargs):
-        return None
+        if command[:3] == ["docker", "image", "inspect"]:
+            return subprocess.CompletedProcess(command, 0, stdout="linux/arm64\n", stderr="")
+        return subprocess.CompletedProcess(command, 1)
 
     try:
         test_task.run_test(
@@ -122,3 +129,23 @@ def test_missing_result_exits_two(tmp_path):
         assert error.code == 2
     else:
         raise AssertionError("missing result.json must exit 2")
+
+
+def test_rejects_non_arm64_before_harbor(tmp_path):
+    calls = []
+
+    def run(command, check=False, **kwargs):
+        calls.append(command)
+        return subprocess.CompletedProcess(command, 0, stdout="linux/amd64\n", stderr="")
+
+    try:
+        test_task.run_test(
+            TASK, IMAGE, jobs_dir=tmp_path / "jobs", out=tmp_path / "report.json", run=run
+        )
+    except ValueError as error:
+        assert str(error) == f"image is not linux/arm64: {IMAGE} (linux/amd64)"
+    else:
+        raise AssertionError("non-arm64 image must be rejected")
+    assert len(calls) == 1
+    assert calls[0][:3] == ["docker", "image", "inspect"]
+    assert "harbor" not in calls[0]

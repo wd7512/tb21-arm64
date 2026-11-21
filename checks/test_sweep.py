@@ -99,3 +99,46 @@ def test_jobs_dir_defaults_under_out_and_can_move(tmp_path):
         SINGLE_ARCH, MANIFEST, tmp_path / "b", run=run, test=test, jobs_dir=tmp_path / "j"
     )
     assert test.jobs_dir == tmp_path / "j"
+
+
+def test_sweep_inspect_call_keeps_capture_output(tmp_path):
+    observed = []
+
+    def run(command, **kwargs):
+        observed.append((command, kwargs))
+        return subprocess.CompletedProcess(command, 0, stdout="linux/arm64\n", stderr="")
+
+    def test(task, image, **kwargs):
+        kwargs["run"](
+            ["docker", "image", "inspect", "--format", "{{.Os}}/{{.Architecture}}", image],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        return {"verdict": "verified", "reason": None}
+
+    sweep.sweep_one(SINGLE_ARCH, MANIFEST, tmp_path, run=run, test=test)
+    inspect = next(call for call in observed if call[0][:3] == ["docker", "image", "inspect"])
+    assert inspect[1] == {"check": False, "capture_output": True, "text": True}
+
+
+def test_default_sweep_excludes_skipped_tasks(monkeypatch, tmp_path):
+    captured = {}
+
+    def fake_sweep(tasks, manifest, out, **kwargs):
+        captured["tasks"] = tasks
+        return []
+
+    monkeypatch.setattr(sweep, "sweep", fake_sweep)
+    assert sweep.main(["--out", str(tmp_path)]) == 0
+    assert "qemu-alpine-ssh" not in captured["tasks"]
+    assert "qemu-startup" not in captured["tasks"]
+
+
+def test_explicit_skipped_task_is_rejected(monkeypatch, tmp_path):
+    import pytest
+
+    monkeypatch.setattr(sweep, "sweep", lambda *args, **kwargs: [])
+    with pytest.raises(SystemExit) as error:
+        sweep.main(["qemu-startup", "--out", str(tmp_path)])
+    assert error.value.code == 2

@@ -12,7 +12,7 @@
 #
 # Optional environment:
 #   UV              uv executable, with uvx beside it (default: uv on PATH)
-#   SWEEP_JOBS      tasks at a time (default 2)
+#   SWEEP_JOBS      tasks at a time (default 1; rootless Docker cannot cap container memory)
 #   SWEEP_OUT       results folder on persistent storage (default reports/local/slurm/<job id>)
 #   HRR_REF         harbor-research-runner ref that provides docker-engine.sh (default dev)
 #   BUILDX_VERSION  buildx CLI plugin release (default 0.38.2)
@@ -77,7 +77,7 @@ export PATH="$uv_dir:$PATH"
 export UV_CACHE_DIR="$work/uv-cache" UV_PYTHON_INSTALL_DIR="$work/uv-python"
 cd "$repo"
 set +e
-"$uv_bin" run python tools/sweep.py --jobs "${SWEEP_JOBS:-2}" --prune \
+"$uv_bin" run python tools/sweep.py --jobs "${SWEEP_JOBS:-1}" --prune \
     --out "$out" --jobs-dir "$work/jobs" "$@"
 status=$?
 set -e

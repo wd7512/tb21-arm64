@@ -81,6 +81,15 @@ def run_test(task, image, runs=3, out=None, jobs_dir=None, run=subprocess.run):
     task_folder = _task_folder(task)
     if runs < 1:
         raise ValueError("runs must be at least 1")
+    inspection = run(
+        ["docker", "image", "inspect", "--format", "{{.Os}}/{{.Architecture}}", image],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    architecture = inspection.stdout.strip()
+    if inspection.returncode != 0 or architecture != "linux/arm64":
+        raise ValueError(f"image is not linux/arm64: {image} ({architecture or 'not found'})")
     jobs_dir = Path(jobs_dir) if jobs_dir is not None else ROOT / "jobs"
     out = Path(out) if out is not None else ROOT / "reports" / "local" / f"{task}.test.json"
     jobs_dir = jobs_dir.resolve()

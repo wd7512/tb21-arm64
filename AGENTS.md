@@ -34,3 +34,4 @@ and the `nop` agent scores 0. `verified-isambard` adds the same result on Isamba
 - Keep the canary GUID lines in task files.
 - Never push images or tags from a local machine; only the CI workflow publishes.
 - Tests are fast and few, and guard a real failure.
+- Every image must be native `linux/arm64`; never build from, copy from, or run an amd64 image, let `tools/test_task.py` enforce the architecture, and keep the two QEMU tasks skipped.

@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 DIGEST = re.compile(r"sha256:[0-9a-f]{64}\Z")
-STATUSES = {"untested", "failing", "verified-ci", "verified-isambard"}
+STATUSES = {"untested", "failing", "verified-ci", "verified-isambard", "skipped"}
 FIX_CLASSES = {"port", "drift", "defect"}
 
 
@@ -25,6 +25,10 @@ def check_manifest(manifest_path, root):
         assert DIGEST.fullmatch(upstream["package_digest"]), f"{name}: invalid package_digest"
         assert DIGEST.fullmatch(upstream["image_digest"]), f"{name}: invalid image_digest"
         assert record["status"] in STATUSES, f"{name}: invalid status"
+        if record["status"] == "skipped":
+            assert isinstance(record["evidence"], str) and record["evidence"].strip(), (
+                f"{name}: skipped status requires evidence"
+            )
         classes = record["fix_classes"]
         assert isinstance(classes, list), f"{name}: invalid fix_classes"
         assert set(classes) <= FIX_CLASSES, f"{name}: invalid fix_classes"
@@ -61,6 +65,13 @@ def test_manifest_invariants(tmp_path):
         (
             lambda data: data["tasks"][next(iter(data["tasks"]))].__setitem__("status", "unknown"),
             "invalid status",
+        ),
+        (
+            lambda data: (
+                data["tasks"][next(iter(data["tasks"]))].__setitem__("status", "skipped"),
+                data["tasks"][next(iter(data["tasks"]))].__setitem__("evidence", None),
+            ),
+            "skipped status requires evidence",
         ),
         (
             lambda data: data["tasks"][next(iter(data["tasks"]))].__setitem__(

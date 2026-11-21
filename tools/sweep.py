@@ -40,7 +40,9 @@ def sweep_one(
     with (out / f"{task}.log").open("w", encoding="utf-8") as log:
 
         def logged(command, check=False, **kwargs):
-            return run(command, check=check, stdout=log, stderr=subprocess.STDOUT)
+            if "capture_output" not in kwargs and "stdout" not in kwargs:
+                kwargs = {"stdout": log, "stderr": subprocess.STDOUT}
+            return run(command, check=check, **kwargs)
 
         if source == "build":
             prepare = ["bash", str(ROOT / "tools" / "build.sh"), task, image]
@@ -98,7 +100,17 @@ def main(argv=None):
     unknown = sorted(set(args.tasks) - set(manifest["tasks"]))
     if unknown:
         parser.error(f"unknown tasks: {' '.join(unknown)}")
-    tasks = args.tasks or sorted(manifest["tasks"])
+    if args.tasks:
+        skipped = sorted(
+            task for task in args.tasks if manifest["tasks"][task]["status"] == "skipped"
+        )
+        if skipped:
+            parser.error(f"skipped tasks cannot be swept: {' '.join(skipped)}")
+        tasks = args.tasks
+    else:
+        tasks = sorted(
+            task for task, record in manifest["tasks"].items() if record["status"] != "skipped"
+        )
     rows = sweep(
         tasks,
         manifest,

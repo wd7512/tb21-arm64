@@ -933,12 +933,12 @@
       }
     },
     "qemu-alpine-ssh": {
-      "evidence": null,
+      "evidence": "owner decision 2026-11-21: QEMU tasks are out of scope",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "skipped",
       "upstream": {
         "image": "alexgshaw/qemu-alpine-ssh:20251031",
         "image_digest": "sha256:541e8214a8c4faa7b556531b899d45da21048fa2ca6dd328d8cb6c4cffa8e964",
@@ -947,12 +947,12 @@
       }
     },
     "qemu-startup": {
-      "evidence": null,
+      "evidence": "owner decision 2026-11-21: QEMU tasks are out of scope",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "skipped",
       "upstream": {
         "image": "alexgshaw/qemu-startup:20251031",
         "image_digest": "sha256:1a666e049db553c5e713830b1f5de1953210ab7c99212d006bb4e46cbc6b6d04",
