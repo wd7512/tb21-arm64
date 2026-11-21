@@ -15,3 +15,8 @@ The container images built from these folders contain third-party software
 (operating system packages, language packages, datasets and other files) under
 their own licences, as do the upstream Terminal-Bench images they are built to
 match.
+
+make-doom-for-mips and make-mips-interpreter vendor doom.wad in their environment folders. It is
+doom1.wad, the shareware data file of DOOM v1.9 by id Software (4196020 bytes, sha256
+1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771). id Software's shareware licence
+permits redistributing it unmodified and without charge. It is included unmodified.
