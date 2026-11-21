@@ -85,6 +85,7 @@ jobs:
           path: |
             reports/ci/*.json
             reports/ci/*.log
+            reports/ci/jobs/**
           if-no-files-found: ignore
           retention-days: 14
       - name: Publish the tested image
