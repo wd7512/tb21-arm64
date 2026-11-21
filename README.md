@@ -29,6 +29,12 @@ instead, which changes only fix-git's clone source.
 A task is `verified-ci` when, on the CI arm64 runner, the oracle passes 3 sequential runs out of 3
 and the `nop` agent scores 0. `manifest.json` records each task's status and evidence.
 
+## Concurrency on hosts without a bridge network
+
+Each `manifest.json` task entry has a `host_ports` list of the TCP ports its oracle, tests, or
+required services listen on. A job made only of tasks with `host_ports: []` is safe to run
+concurrently on a host without a bridge network.
+
 ## CI
 
 Pull requests run the repository gate and build and verify changed tasks on arm64 runners. Changes

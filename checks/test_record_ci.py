@@ -73,6 +73,7 @@ def test_verified_task_updates_only_docker_image_line(tmp_path):
     assert manifest["tasks"][TASK]["image"] == IMAGE
     assert manifest["tasks"][TASK]["status"] == "verified-ci"
     assert manifest["tasks"][TASK]["evidence"] == RUN_URL
+    assert manifest["tasks"][TASK]["host_ports"] == []
 
 
 def test_failing_task_records_reason(tmp_path):
