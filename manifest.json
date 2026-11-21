@@ -31,12 +31,12 @@
       }
     },
     "break-filter-js-from-html": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44842320244",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/break-filter-js-from-html:20251031",
         "image_digest": "sha256:d7bfb45e47cf10d2e21dc520239215498f4eba9c1ab2d0cd7d647985dddb4fa8",
@@ -713,10 +713,10 @@
       }
     },
     "mteb-retrieve": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44842320244",
       "fix_classes": [],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/mteb-retrieve:20260430",
         "image_digest": "sha256:41bdc22a2ebb9b043b1c12283e383c8dec2a8f183bc99ca680377b666cc7c3b4",
@@ -1003,12 +1003,12 @@
       }
     },
     "regex-log": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44842320244",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/regex-log:20251031",
         "image_digest": "sha256:90101b2e815323a8da20528a1439bebc407eb9761c9c68a3d557730856c878e9",
