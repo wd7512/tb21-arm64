@@ -617,12 +617,12 @@
       }
     },
     "make-doom-for-mips": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44846182481",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/make-doom-for-mips:20251031",
         "image_digest": "sha256:80a9459f1b94b692ea8346f68e6b864f6c4d984fbdf6ffd68ad332308300c2ec",
@@ -631,12 +631,12 @@
       }
     },
     "make-mips-interpreter": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44846182481",
       "fix_classes": [
         "drift"
       ],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/make-mips-interpreter:20251031",
         "image_digest": "sha256:082fc8821b317f30fdfbf8d08d528874ce331c03e8083aef0406d48cdd7132a2",
