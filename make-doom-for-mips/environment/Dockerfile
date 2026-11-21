@@ -16,6 +16,6 @@ RUN git clone -o origin --single-branch https://github.com/ozkl/doomgeneric && \
 
 COPY task-deps/doomgeneric_img.c /app/doomgeneric/doomgeneric/
 
-RUN curl https://distro.ibiblio.org/slitaz/sources/packages/d/doom1.wad > doom.wad
+COPY doom.wad /app/doom.wad
 
 COPY task-deps/vm.js /app
