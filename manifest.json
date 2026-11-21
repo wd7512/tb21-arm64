@@ -467,7 +467,8 @@
     "git-multibranch": {
       "evidence": null,
       "fix_classes": [
-        "drift"
+        "drift",
+        "port"
       ],
       "image": null,
       "status": "untested",

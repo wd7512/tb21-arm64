@@ -26,6 +26,9 @@ RUN mkdir -p /etc/ssl/certs && \
 # Create web directories
 RUN mkdir -p /var/www/html /var/www/dev
 
+# sshd's privilege-separation directory, created with a fixed mode (see fixes/git-multibranch.md)
+RUN install -d -m 0755 -o root -g root /run/sshd
+
 # Set working directory
 WORKDIR /app
 
