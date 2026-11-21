@@ -43,7 +43,7 @@ def _copy_with_image(task_folder, image, temp_root):
     return copied_task
 
 
-def _run_harbor(task_folder, agent, jobs_dir, job_name, run):
+def _run_harbor(task_folder, agent, jobs_dir, job_name, run, network="default"):
     command = [
         "uvx",
         "--from",
@@ -63,6 +63,10 @@ def _run_harbor(task_folder, agent, jobs_dir, job_name, run):
         "-y",
         "-q",
     ]
+    if network == "host":
+        compose = task_folder / "docker-compose.host.yaml"
+        compose.write_text("services:\n  main:\n    network_mode: host\n", encoding="utf-8")
+        command.extend(["--extra-docker-compose", str(compose)])
     run(command, check=False)
     results = list((jobs_dir / job_name).glob("*/result.json"))
     if len(results) != 1:
@@ -77,10 +81,12 @@ def _run_harbor(task_folder, agent, jobs_dir, job_name, run):
     return {"reward": reward, "exception_type": exception_type, "job": job_name}
 
 
-def run_test(task, image, runs=3, out=None, jobs_dir=None, run=subprocess.run):
+def run_test(task, image, runs=3, out=None, jobs_dir=None, network="default", run=subprocess.run):
     task_folder = _task_folder(task)
     if runs < 1:
         raise ValueError("runs must be at least 1")
+    if network not in {"default", "host"}:
+        raise ValueError(f"network must be 'default' or 'host': {network}")
     inspection = run(
         ["docker", "image", "inspect", "--format", "{{.Os}}/{{.Architecture}}", image],
         check=False,
@@ -99,9 +105,9 @@ def run_test(task, image, runs=3, out=None, jobs_dir=None, run=subprocess.run):
         copied_task = _copy_with_image(task_folder, image, Path(temporary))
         for index in range(1, runs + 1):
             job_name = f"{task}-oracle-{index}-{stamp}"
-            oracle.append(_run_harbor(copied_task, "oracle", jobs_dir, job_name, run))
+            oracle.append(_run_harbor(copied_task, "oracle", jobs_dir, job_name, run, network))
         nop_name = f"{task}-nop-{stamp}"
-        nop = _run_harbor(copied_task, "nop", jobs_dir, nop_name, run)
+        nop = _run_harbor(copied_task, "nop", jobs_dir, nop_name, run, network)
 
     reason = None
     for index, result in enumerate(oracle, start=1):
@@ -140,6 +146,7 @@ def main(argv=None, *, run=subprocess.run):
     parser.add_argument("--runs", type=int, default=3)
     parser.add_argument("--out")
     parser.add_argument("--jobs-dir")
+    parser.add_argument("--network", choices=("default", "host"), default="default")
     args = parser.parse_args(argv)
     try:
         report = run_test(
@@ -148,6 +155,7 @@ def main(argv=None, *, run=subprocess.run):
             runs=args.runs,
             out=args.out,
             jobs_dir=args.jobs_dir,
+            network=args.network,
             run=run,
         )
     except ValueError as error:

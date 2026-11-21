@@ -149,3 +149,62 @@ def test_rejects_non_arm64_before_harbor(tmp_path):
     assert len(calls) == 1
     assert calls[0][:3] == ["docker", "image", "inspect"]
     assert "harbor" not in calls[0]
+
+
+def test_host_network_adds_compose_overlay(tmp_path):
+    harbor_calls = []
+
+    def run(command, check=False, **kwargs):
+        if command[:3] == ["docker", "image", "inspect"]:
+            return subprocess.CompletedProcess(command, 0, stdout="linux/arm64\n", stderr="")
+        harbor_calls.append(command)
+        compose = Path(command[command.index("--extra-docker-compose") + 1])
+        assert compose.read_text(encoding="utf-8") == "services:\n  main:\n    network_mode: host\n"
+        return fake_run([1.0, 1.0, 1.0, 0.0])(command, check=check, **kwargs)
+
+    test_task.run_test(
+        TASK,
+        IMAGE,
+        runs=1,
+        network="host",
+        jobs_dir=tmp_path / "jobs",
+        out=tmp_path / "report.json",
+        run=run,
+    )
+    assert len(harbor_calls) == 2
+
+
+def test_default_network_keeps_harbor_command_unchanged(tmp_path):
+    calls = []
+
+    def run(command, check=False, **kwargs):
+        calls.append(command)
+        jobs_dir = Path(command[command.index("-o") + 1])
+        job_name = command[command.index("--job-name") + 1]
+        result_dir = jobs_dir / job_name / f"{TASK}__fake"
+        result_dir.mkdir(parents=True)
+        (result_dir / "result.json").write_text(json.dumps({"verifier_result": None}))
+        return None
+
+    test_task._run_harbor(Path("task"), "oracle", tmp_path, "job", run)
+    assert calls == [
+        [
+            "uvx",
+            "--from",
+            "harbor==0.23.0",
+            "harbor",
+            "run",
+            "-p",
+            "task",
+            "-a",
+            "oracle",
+            "-e",
+            "docker",
+            "-o",
+            str(tmp_path),
+            "--job-name",
+            "job",
+            "-y",
+            "-q",
+        ]
+    ]

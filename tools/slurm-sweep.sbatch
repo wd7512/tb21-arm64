@@ -16,6 +16,8 @@
 #   SWEEP_OUT       results folder on persistent storage (default reports/local/slurm/<job id>)
 #   HRR_REF         harbor-research-runner ref that provides docker-engine.sh (default dev)
 #   BUILDX_VERSION  buildx CLI plugin release (default 0.38.2)
+#   SWEEP_NETWORK   auto, host, or default networking (default auto)
+#   SWEEP_REGISTRY_AUTH  mode-600 file of REGISTRY USERNAME TOKEN lines for Docker login
 #   HRR_ENGINE, HRR_DOCKER_VERSION, HRR_COMPOSE_VERSION are read by docker-engine.sh.
 
 # engine_selected, ensure_compose_plugin and stop_docker_engine come from docker-engine.sh.
@@ -50,6 +52,26 @@ if ! start_docker_engine; then
     exit 1
 fi
 
+if [[ -n "${SWEEP_REGISTRY_AUTH:-}" ]]; then
+    export DOCKER_CONFIG="$work/docker-config"
+    mkdir -p "$DOCKER_CONFIG"
+    if [[ -f "$work/hrr/scripts/slurm/registry.sh" ]]; then
+        # shellcheck source=/dev/null
+        . "$work/hrr/scripts/slurm/registry.sh"
+        registry_login "$SWEEP_REGISTRY_AUTH"
+    else
+        auth_mode=$(stat -c '%a' "$SWEEP_REGISTRY_AUTH")
+        if [[ "$auth_mode" != 600 ]]; then
+            printf 'SWEEP_REGISTRY_AUTH must have mode 600\n' >&2
+            exit 1
+        fi
+        while IFS=' ' read -r registry username token || [[ -n "${registry:-}${username:-}${token:-}" ]]; do
+            [[ -n "${registry:-}" ]] || continue
+            printf '%s' "$token" | docker login "$registry" -u "$username" --password-stdin >/dev/null
+        done <"$SWEEP_REGISTRY_AUTH"
+    fi
+fi
+
 if ! docker buildx version >/dev/null 2>&1; then
     export DOCKER_CONFIG="${DOCKER_CONFIG:-$work/docker-config}"
     mkdir -p "$DOCKER_CONFIG/cli-plugins"
@@ -64,8 +86,22 @@ if ! docker buildx version >/dev/null 2>&1; then
     chmod 700 "$DOCKER_CONFIG/cli-plugins/docker-buildx"
     ensure_compose_plugin
 fi
+
+network_mode=${SWEEP_NETWORK:-auto}
+case "$network_mode" in
+    auto | host | default) ;;
+    *) printf 'SWEEP_NETWORK must be auto, host, or default\n' >&2; exit 2 ;;
+esac
+if [[ "$network_mode" == auto ]]; then
+    if docker network inspect bridge >/dev/null 2>&1; then
+        network_mode=default
+    else
+        network_mode=host
+    fi
+fi
 {
     printf 'engine=%s\n' "$engine_selected"
+    printf 'network=%s\n' "$network_mode"
     docker version --format 'docker={{.Server.Version}}'
     docker compose version --short | sed 's/^/compose=/'
     docker buildx version | sed 's/^/buildx=/'
@@ -78,7 +114,7 @@ export UV_CACHE_DIR="$work/uv-cache" UV_PYTHON_INSTALL_DIR="$work/uv-python"
 cd "$repo"
 set +e
 "$uv_bin" run python tools/sweep.py --jobs "${SWEEP_JOBS:-1}" --prune \
-    --out "$out" --jobs-dir "$work/jobs" "$@"
+    --out "$out" --jobs-dir "$work/jobs" --network "$network_mode" "$@"
 status=$?
 set -e
 tar -czf "$out/jobs-${SLURM_JOB_ID:-manual}.tar.gz" -C "$work" jobs 2>/dev/null || true
