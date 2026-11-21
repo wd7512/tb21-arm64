@@ -3,6 +3,7 @@
 import argparse
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import time
@@ -31,7 +32,16 @@ def image_for(task, manifest):
 
 
 def sweep_one(
-    task, manifest, out, *, run=subprocess.run, test=None, runs=3, prune=False, jobs_dir=None
+    task,
+    manifest,
+    out,
+    *,
+    run=subprocess.run,
+    test=None,
+    runs=3,
+    prune=False,
+    jobs_dir=None,
+    network="default",
 ):
     test = test or _load_test_task()
     image, source = image_for(task, manifest)
@@ -41,14 +51,18 @@ def sweep_one(
 
         def logged(command, check=False, **kwargs):
             if "capture_output" not in kwargs and "stdout" not in kwargs:
-                kwargs = {"stdout": log, "stderr": subprocess.STDOUT}
+                kwargs.update({"stdout": log, "stderr": subprocess.STDOUT})
             return run(command, check=check, **kwargs)
 
         if source == "build":
             prepare = ["bash", str(ROOT / "tools" / "build.sh"), task, image]
+            prepare_kwargs = (
+                {"env": {**os.environ, "BUILD_NETWORK": "host"}} if network == "host" else {}
+            )
         else:
             prepare = ["docker", "pull", "--platform", "linux/arm64", image]
-        returncode = logged(prepare).returncode
+            prepare_kwargs = {}
+        returncode = logged(prepare, **prepare_kwargs).returncode
         if returncode != 0:
             verdict, reason = "failing", f"{source} exit {returncode}"
         else:
@@ -59,6 +73,7 @@ def sweep_one(
                     runs=runs,
                     out=out / f"{task}.test.json",
                     jobs_dir=jobs_dir or out / "jobs",
+                    network=network,
                     run=logged,
                 )
                 verdict, reason = report["verdict"], report["reason"]
@@ -90,6 +105,7 @@ def main(argv=None):
     parser.add_argument("tasks", nargs="*", help="default: every task in manifest.json")
     parser.add_argument("--jobs", type=int, default=1)
     parser.add_argument("--runs", type=int, default=3)
+    parser.add_argument("--network", choices=("default", "host"), default="default")
     parser.add_argument("--out", default=str(ROOT / "reports" / "local" / "sweep"))
     parser.add_argument("--jobs-dir", help="Harbor job folders (default: OUT/jobs)")
     parser.add_argument(
@@ -119,6 +135,7 @@ def main(argv=None):
         runs=args.runs,
         prune=args.prune,
         jobs_dir=Path(args.jobs_dir).resolve() if args.jobs_dir else None,
+        network=args.network,
     )
     return 0 if all(row["verdict"] == "verified" for row in rows) else 1
 

@@ -17,7 +17,13 @@ fi
 
 cd "$root"
 revision=$(git -C "$root" rev-parse HEAD)
-docker buildx build \
+build_args=(
+    buildx build
+)
+if [[ "${BUILD_NETWORK:-}" == "host" ]]; then
+    build_args+=(--network host)
+fi
+build_args+=(
     --platform linux/arm64 \
     --load \
     --tag "$tag" \
@@ -25,3 +31,5 @@ docker buildx build \
     --label "org.opencontainers.image.revision=$revision" \
     --label "org.opencontainers.image.licenses=Apache-2.0" \
     "$task/environment"
+)
+docker "${build_args[@]}"

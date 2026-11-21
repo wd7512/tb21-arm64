@@ -142,3 +142,19 @@ def test_explicit_skipped_task_is_rejected(monkeypatch, tmp_path):
     with pytest.raises(SystemExit) as error:
         sweep.main(["qemu-startup", "--out", str(tmp_path)])
     assert error.value.code == 2
+
+
+def test_host_network_is_passed_to_build_and_test(tmp_path):
+    observed = []
+
+    def run(command, **kwargs):
+        observed.append((command, kwargs))
+        return subprocess.CompletedProcess(command, 0)
+
+    def test(task, image, **kwargs):
+        assert kwargs["network"] == "host"
+        return {"verdict": "verified", "reason": None}
+
+    sweep.sweep_one(SINGLE_ARCH, MANIFEST, tmp_path, run=run, test=test, network="host")
+    build = observed[0]
+    assert build[1]["env"]["BUILD_NETWORK"] == "host"
