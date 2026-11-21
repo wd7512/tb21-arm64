@@ -31,11 +31,11 @@
       }
     },
     "break-filter-js-from-html": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44850223714",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/break-filter-js-from-html@sha256:67f5eec4b43f564a9ad88802a8576cd0192dfc2c236c4378142d5a9bf693780c",
+      "image": "ghcr.io/wd7512/tb21-arm64/break-filter-js-from-html@sha256:683d431c68c7db693f9ec623d10fd89fab23272d2328a6c6186dbe03099d337e",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/break-filter-js-from-html:20251031",
@@ -713,7 +713,7 @@
       }
     },
     "mteb-retrieve": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44850223714",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
       "fix_classes": [],
       "image": null,
       "status": "verified-ci",
@@ -1003,11 +1003,11 @@
       }
     },
     "regex-log": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44850223714",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/regex-log@sha256:68d8602c6bc992052e69ec536f2d74298a462026bb098bca2a7910fd98bcad5c",
+      "image": "ghcr.io/wd7512/tb21-arm64/regex-log@sha256:74d55fc078564de2c3f934f52433e3d56959afc02f837d8bf92c2fe119ba8bb2",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/regex-log:20251031",
