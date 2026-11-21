@@ -48,12 +48,12 @@
       "host_ports": []
     },
     "build-cython-ext": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/build-cython-ext@sha256:ddaf5905e2902fb510ccc78652bc75139c9295ec295db4d90c027a4ea0a5d514",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/build-cython-ext:20251031",
         "image_digest": "sha256:3612a38fadb89a96f74a1a951fb0b0af734198fd160571eeaba6401593234594",
@@ -78,12 +78,12 @@
       "host_ports": []
     },
     "build-pov-ray": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/build-pov-ray@sha256:96c410f6af78e3a216d2a650429925719dc78b420c5b7446c9338e2e9bf38a83",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/build-pov-ray:20251031",
         "image_digest": "sha256:874baf49341e2853a15a9184e308c7eb632e97f434359fcff2891c6e5ca1b39b",
@@ -709,12 +709,12 @@
       "host_ports": []
     },
     "mcmc-sampling-stan": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/mcmc-sampling-stan@sha256:6ae8faf9ab9b7c9636b1f0e0ca6a2aa7389b00a6130ffa16faf36392263d6de2",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/mcmc-sampling-stan:20251031",
         "image_digest": "sha256:073fc36a3347b4f6b43bd6e98339542c41ed531c771af8bee40ba10f00cfabaf",
@@ -947,12 +947,12 @@
       "host_ports": []
     },
     "protein-assembly": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/protein-assembly@sha256:5a209dbe0e18c43d8b806ea027938e179c6cfc3ec765f092d00abd44591e2c1f",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/protein-assembly:20260403",
         "image_digest": "sha256:602c467ae6b661a73441b960d9fa7130f068f4c6041d37ef8632611733d83f4a",

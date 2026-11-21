@@ -28,7 +28,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/mcmc-sampling-stan:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/mcmc-sampling-stan@sha256:6ae8faf9ab9b7c9636b1f0e0ca6a2aa7389b00a6130ffa16faf36392263d6de2"
 cpus = 4
 memory_mb = 8192
 storage_mb = 10240
