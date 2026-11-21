@@ -109,6 +109,9 @@ def image_digest(image):
 
 
 def build_manifest(root):
+    manifest_path = root / "manifest.json"
+    existing = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    existing_tasks = existing.get("tasks", {})
     directories = task_directories(root)
     digests = package_digests(root, directories)
     tasks = {}
@@ -127,6 +130,7 @@ def build_manifest(root):
             "status": "untested",
             "fix_classes": [],
             "evidence": None,
+            "host_ports": existing_tasks.get(task_dir.name, {}).get("host_ports", []),
         }
     return {
         "dataset": DATASET,
