@@ -89,7 +89,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
       - name: Publish the tested image
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.TB21_PUBLISH == 'true'
+        if: always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && vars.TB21_PUBLISH == 'true'
         env:
           TASK: ${{ matrix.task }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
