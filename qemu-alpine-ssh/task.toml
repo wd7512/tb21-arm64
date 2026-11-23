@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:e37e14322fc8c36b9e2cf1672ebbe5971bc84f5b10edcc6a3dc1d33d343af0a9"
+docker_image = "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:9c24c7b23d38f5dc425779ce0ee39e48c411f901940f391b0e04e4095a22be72"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240

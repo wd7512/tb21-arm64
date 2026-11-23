@@ -1028,11 +1028,11 @@
       "host_ports": []
     },
     "qemu-alpine-ssh": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/45212783923",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/45220438644",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:e37e14322fc8c36b9e2cf1672ebbe5971bc84f5b10edcc6a3dc1d33d343af0a9",
+      "image": "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:9c24c7b23d38f5dc425779ce0ee39e48c411f901940f391b0e04e4095a22be72",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/qemu-alpine-ssh:20251031",
