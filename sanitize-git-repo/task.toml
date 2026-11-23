@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/sanitize-git-repo@sha256:54bee8d3c22d9d86633d43982d9bea58219028bb3b36fd6c886b327fedae18bf"
+docker_image = "ghcr.io/wd7512/tb21-arm64/sanitize-git-repo@sha256:53ce4abc40fd4f3d534a0d8b045e45302fb94f956de47d25bacdf49f11df1951"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

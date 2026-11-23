@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/polyglot-c-py@sha256:5d15f9d2f1d1228c6dbf62ac08aecfac195840c309fc31ba1d7124c2c998d21d"
+docker_image = "ghcr.io/wd7512/tb21-arm64/polyglot-c-py@sha256:bc5234dbc71ef870a429b6a5bf8fc59ef59d87baad66d33a2d2951755e998929"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

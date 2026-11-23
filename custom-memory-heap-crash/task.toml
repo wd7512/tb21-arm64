@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/custom-memory-heap-crash@sha256:81b6ed4d8fb79bb47ca8d20fdf629ef6d85cb9fbb7db8ecf07c409e6715652ff"
+docker_image = "ghcr.io/wd7512/tb21-arm64/custom-memory-heap-crash@sha256:77b8afb3a6a9c9b1b3f7f5df0ac435cd857ae47a4a3b1380030e6909e429172d"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

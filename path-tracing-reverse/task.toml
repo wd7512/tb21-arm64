@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/path-tracing-reverse@sha256:fe440d038174b888c8b57f3cf80762eefc159dd159a7cdc34839b6fe61aa51d2"
+docker_image = "ghcr.io/wd7512/tb21-arm64/path-tracing-reverse@sha256:c1b6bf3606fe0d461c74da94c7e12dd5a2525f23646b5f9c6540c937fccee1a8"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

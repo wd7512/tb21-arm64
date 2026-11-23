@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/kv-store-grpc@sha256:10c521544db3c09b2a5699385125a751afdbf60260671eb4eb38d0b87f5e4cb0"
+docker_image = "ghcr.io/wd7512/tb21-arm64/kv-store-grpc@sha256:1d6e99371db416e1fb1274432fcbf330e352f878c86be5c5eb0d3005d640f948"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

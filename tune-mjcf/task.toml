@@ -27,7 +27,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/tune-mjcf@sha256:4a6ed380e68876116d03e6cd71b8a4cbacfdcf84a543db283746b8b2b5e1a70a"
+docker_image = "ghcr.io/wd7512/tb21-arm64/tune-mjcf@sha256:74c8ed4279e12b047bd07cc4f6380c695b5457cd1813d81eb5ffde11dbef73e1"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

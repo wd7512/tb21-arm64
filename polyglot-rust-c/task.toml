@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/polyglot-rust-c@sha256:78a93b2d7db5513fdbf1bc5f74ec3a37fc991086d13ced1e6960b5f9d54a8436"
+docker_image = "ghcr.io/wd7512/tb21-arm64/polyglot-rust-c@sha256:fc8fb06c1e51bd3ac4538baaf7f68445e262562a88caad007e6145f4c4a8118b"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

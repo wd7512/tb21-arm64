@@ -26,7 +26,7 @@ timeout_sec = 3600.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/video-processing@sha256:f10d892b43e44f04365345bb37da9b0c78b571cc9777ca3a05ff181c4aa1907b"
+docker_image = "ghcr.io/wd7512/tb21-arm64/video-processing@sha256:33daaa6ab41de93e73ef27b11f135c9bc0086e50b24ac7e66c9b3c15c5568a8d"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

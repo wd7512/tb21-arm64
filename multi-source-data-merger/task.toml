@@ -27,7 +27,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/multi-source-data-merger@sha256:45f172c05a74dd7a7aaf0ed63ff8812b64c2a882cccb0024db159d1beff1ec18"
+docker_image = "ghcr.io/wd7512/tb21-arm64/multi-source-data-merger@sha256:8e882337ff6bccfb78331467d1208261cd59df83dc08d6c3f24eb9f5f71706a9"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

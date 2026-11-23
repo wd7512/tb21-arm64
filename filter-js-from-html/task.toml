@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/filter-js-from-html@sha256:2bbea748147789679370393e1d959e5a778e680a45308208fb5bffc649e2d4a3"
+docker_image = "ghcr.io/wd7512/tb21-arm64/filter-js-from-html@sha256:5540579aabefefcadbd952c763cf09dc076a4f6ca8eb7bf95cb00b867d643a67"
 cpus = 1
 memory_mb = 8192
 storage_mb = 10240

@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/dna-assembly@sha256:7a4ac746201e50408875048b30a91f53a16574833fe6b3e362ada3fdb2f9b256"
+docker_image = "ghcr.io/wd7512/tb21-arm64/dna-assembly@sha256:7a95324dbcb4e4d1132283b32bbbfeb6f7b475eda5da238d9de7244fe59cc9cf"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

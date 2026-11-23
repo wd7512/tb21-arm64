@@ -26,7 +26,7 @@ timeout_sec = 3600.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/fix-ocaml-gc@sha256:284afafbddcd23c3cf2c86d24804571bf5666a610e2c5d3e0b702df39df1ca70"
+docker_image = "ghcr.io/wd7512/tb21-arm64/fix-ocaml-gc@sha256:38d608cad6716560ea59496a3deec77a0bc57e6ee4efeb04a23d95497cab741e"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/extract-moves-from-video@sha256:0dd4b61bf6e5352dea017e5020fc913f891a805d6b88b97325affa15523702af"
+docker_image = "ghcr.io/wd7512/tb21-arm64/extract-moves-from-video@sha256:828e57af0dea33419fd48bfc6774c3bfa7b7c8c80b88886fa1fd180db578f331"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

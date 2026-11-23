@@ -27,7 +27,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/largest-eigenval@sha256:5b711f8794d912c3f53068365d2e98c538bbb03b3c0640fa357aab00e1bc77c2"
+docker_image = "ghcr.io/wd7512/tb21-arm64/largest-eigenval@sha256:5ddb5e437ab2a54ce14dd8b8dc86af41d8156fa306d39b8ffd5f594b44e96950"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

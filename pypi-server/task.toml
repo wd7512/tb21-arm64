@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/pypi-server@sha256:a42235c10d1d005e59885284845ac7d07a487adfc3f1578a68d7ad96f797a97e"
+docker_image = "ghcr.io/wd7512/tb21-arm64/pypi-server@sha256:615e2c0e7ec441e333a57e06e1797590d0be37a6ebddc277865df4525cf6f8f3"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

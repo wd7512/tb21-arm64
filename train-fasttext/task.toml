@@ -26,7 +26,7 @@ timeout_sec = 3600.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/train-fasttext@sha256:95c9cc2ecd20e3d4772b94acba2c45a8d932571503c1f77545422dcfc78a3995"
+docker_image = "ghcr.io/wd7512/tb21-arm64/train-fasttext@sha256:d39e0da7d64dc8fdba583974a80b3d391a5f8273e43f2f873b92d293dfe2e893"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240

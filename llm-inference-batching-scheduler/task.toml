@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/llm-inference-batching-scheduler@sha256:d5a22c5576e1f2a9ee9a9bc9f7bfa5e788125dda83a645ce524a1264e31497b5"
+docker_image = "ghcr.io/wd7512/tb21-arm64/llm-inference-batching-scheduler@sha256:3430c8f954b4f1d026ed39277b2510631fd554e4369b153977488e7b215365e0"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

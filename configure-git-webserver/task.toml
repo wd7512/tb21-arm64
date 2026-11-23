@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/configure-git-webserver@sha256:d82afe5889432b8360ef1e77d1a14821692d02f4e9eb579d70392d7f54d5980f"
+docker_image = "ghcr.io/wd7512/tb21-arm64/configure-git-webserver@sha256:5abe1918667fb1f52e717d28ecddab2c16d9f56d7bb1f45cff284c99223258e1"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

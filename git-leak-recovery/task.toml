@@ -27,7 +27,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/git-leak-recovery@sha256:ff7ffb4d20c13f237015ff9afd05ca1539b57b3c850d4d3a36d9b2ae8610d1c3"
+docker_image = "ghcr.io/wd7512/tb21-arm64/git-leak-recovery@sha256:7edc01871e2c0b3e21d0f54c5b0a20a195d11de0998328090d99336a2bb2e85a"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

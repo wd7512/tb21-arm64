@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/build-pmars@sha256:87bbb84160e4dacbba0ef4d1ed0c7edcd6f904c4456ca88e9343fa62945b3e35"
+docker_image = "ghcr.io/wd7512/tb21-arm64/build-pmars@sha256:791bc1bb0f415e8273f94ff9b19c6e2984a7ca814c42474539f5a25b945d7271"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

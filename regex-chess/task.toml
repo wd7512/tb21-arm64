@@ -26,7 +26,7 @@ timeout_sec = 3600.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/regex-chess@sha256:4a1b697c6b6380e12bc36a7482489ad45eb6dc844452d4a9f5b1d22f4bedb63e"
+docker_image = "ghcr.io/wd7512/tb21-arm64/regex-chess@sha256:0a14a79a9771eb4a5d13ebb19ea354a9f794b103c64e27ae68655c79b333dbfc"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

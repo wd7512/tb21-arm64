@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/cancel-async-tasks@sha256:68e0f84f2f3dda218f1067d81ee67b320eb51cb7ae62fa75b8df1e27d81cfe0a"
+docker_image = "ghcr.io/wd7512/tb21-arm64/cancel-async-tasks@sha256:b8c5ff895f995600ed90ed17bbbe381ab81bd73e60a0503ed58b6e700e1ceaed"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

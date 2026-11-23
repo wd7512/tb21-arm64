@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/make-doom-for-mips@sha256:8f9bd407ee63ea3d71a9ee8e702059a7cdef24036e259205e0ce652b16c5a40f"
+docker_image = "ghcr.io/wd7512/tb21-arm64/make-doom-for-mips@sha256:202bc4f34c31593ced68570caf581745bfbb64a5548474979afcc939ad80c3b3"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

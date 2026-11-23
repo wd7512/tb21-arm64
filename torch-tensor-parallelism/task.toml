@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/torch-tensor-parallelism@sha256:ff8a0cd6bd7ec0b2d323d36a472b9cf9fdb6643749931b5b6fd44bce95de335e"
+docker_image = "ghcr.io/wd7512/tb21-arm64/torch-tensor-parallelism@sha256:f0a8f2f12448126a0a9bb50d9486ff50b142fb77a3cb79065f201aea83e14c67"
 cpus = 1
 memory_mb = 8192
 storage_mb = 10240

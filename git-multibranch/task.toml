@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/git-multibranch@sha256:cbbab5f0676c3a53efdbd000884fc7219d0fb8f9ef2e201d43b984a7ace01e6e"
+docker_image = "ghcr.io/wd7512/tb21-arm64/git-multibranch@sha256:18136f5e27bb4085800ec66189319e24b2feb3aa12408549b59a86951be92465"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

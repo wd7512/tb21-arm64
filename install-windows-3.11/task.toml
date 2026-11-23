@@ -26,7 +26,7 @@ timeout_sec = 3600.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/install-windows-3.11@sha256:9214adae1a3c76426bca4e1067122723f868c5bb172e5ce2cc6d3588a926517b"
+docker_image = "ghcr.io/wd7512/tb21-arm64/install-windows-3.11@sha256:56f52b75aa0f84d691e16f80babd9b2615b2c2e86bc07dbacbbb762034ad44eb"
 cpus = 2
 memory_mb = 4096
 storage_mb = 10240

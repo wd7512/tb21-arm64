@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/feal-differential-cryptanalysis@sha256:914c2edb0a9c036f2a1447142c75b494b0591d4214e5b044a4fea8825aa655cf"
+docker_image = "ghcr.io/wd7512/tb21-arm64/feal-differential-cryptanalysis@sha256:f2c5f55ecd9b568b57338a28517da0f47f838ab3780b7e59cda59551132cdfa4"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

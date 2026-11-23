@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/sqlite-with-gcov@sha256:886dade86508bd6cd69967c001ade01db59f295155178338e08e3a8cbedf820f"
+docker_image = "ghcr.io/wd7512/tb21-arm64/sqlite-with-gcov@sha256:818a5876161ef7ef34b9cfc46f0b500c8c10eb3c8178d7c79c72fced84f036ed"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

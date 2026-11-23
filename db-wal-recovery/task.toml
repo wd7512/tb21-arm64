@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/db-wal-recovery@sha256:b44551927b3612cbd709d1ab882b411ff493b987a693e428cc4f30a17f70aedc"
+docker_image = "ghcr.io/wd7512/tb21-arm64/db-wal-recovery@sha256:f1f87cca41102fc5dcf4299049c8518f44cd8ca01c4338147135269544c5c1e2"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

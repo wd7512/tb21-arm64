@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/torch-pipeline-parallelism@sha256:6576b3f086a8508a3f9bd83bd488522beb3b6b44e8bc3490b8d8d14802fbcf07"
+docker_image = "ghcr.io/wd7512/tb21-arm64/torch-pipeline-parallelism@sha256:7a30466d0e47df78b8038580afb352141cb3d31696265c55a2918c6a3cf9e480"
 cpus = 1
 memory_mb = 8192
 storage_mb = 10240

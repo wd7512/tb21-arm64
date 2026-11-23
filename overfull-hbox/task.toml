@@ -26,7 +26,7 @@ timeout_sec = 750.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/overfull-hbox@sha256:f8e715dc4e4a42fb008d25a9792b0a98b163c05fd1a10ff94346015d9b8f999e"
+docker_image = "ghcr.io/wd7512/tb21-arm64/overfull-hbox@sha256:595ba22a3068ac4085b3d684db22c7556fb41778757327436089b9f9916ce889"
 cpus = 2
 memory_mb = 4096
 storage_mb = 10240
