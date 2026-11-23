@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/chess-best-move:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/chess-best-move@sha256:06a4812b29bc821896d03fd97588c5e964c5866a84009e92587834b19ebc9805"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

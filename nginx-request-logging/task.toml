@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/nginx-request-logging:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/nginx-request-logging@sha256:c1ad98c459540142044e1af8b259f1798a27e760c814f0d2be04fdc0ab222aa6"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

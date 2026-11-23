@@ -26,7 +26,7 @@ timeout_sec = 1200.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/large-scale-text-editing:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/large-scale-text-editing@sha256:1cfa41e210d0959cfa1b7442e6e7a2f1aa0b17faefb09e339b905b2ed9ee5d1c"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

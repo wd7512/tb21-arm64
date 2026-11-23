@@ -26,7 +26,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/protein-assembly@sha256:5a209dbe0e18c43d8b806ea027938e179c6cfc3ec765f092d00abd44591e2c1f"
+docker_image = "ghcr.io/wd7512/tb21-arm64/protein-assembly@sha256:ffaee7b3de9d2e5696df4149c976e905bf3a545c48fc7b787917e1c5e12f4d71"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240
