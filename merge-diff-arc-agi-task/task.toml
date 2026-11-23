@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/merge-diff-arc-agi-task:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/merge-diff-arc-agi-task@sha256:9ed7e0275e6aff7b629e298c3bf641d943815a6c687145c4348e70243a4ae8c9"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240

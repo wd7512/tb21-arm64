@@ -27,7 +27,7 @@ timeout_sec = 12000.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "ghcr.io/wd7512/tb21-arm64/build-pov-ray@sha256:96c410f6af78e3a216d2a650429925719dc78b420c5b7446c9338e2e9bf38a83"
+docker_image = "ghcr.io/wd7512/tb21-arm64/build-pov-ray@sha256:faff5f02bd276c8f540d3156e986d2192820f21abf7d6e8edc2d03892e3fbc96"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

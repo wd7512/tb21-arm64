@@ -26,7 +26,7 @@ timeout_sec = 1200.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/financial-document-processor:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/financial-document-processor@sha256:7af39361de660ee541678ccd83ada3985534dc687fe5dab0cf6798b6bf99d440"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240

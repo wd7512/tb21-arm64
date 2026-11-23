@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/pytorch-model-cli:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/pytorch-model-cli@sha256:d0a28554df1f4be65c18e6943725ac7d92bcf3d8cdb85f42724c79380aefc9dd"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

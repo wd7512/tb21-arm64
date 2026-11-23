@@ -123,9 +123,9 @@ def test_manifest_invariants(tmp_path):
             "invalid fix_classes",
         ),
         (
-            lambda data: data["tasks"][next(iter(data["tasks"]))]["upstream"].__setitem__(
-                "image", "wrong/image:tag"
-            ),
+            lambda data: next(
+                record for record in data["tasks"].values() if record["image"] is None
+            )["upstream"].__setitem__("image", "wrong/image:tag"),
             "docker_image differs from upstream.image",
         ),
     ],

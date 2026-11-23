@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/adaptive-rejection-sampler:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/adaptive-rejection-sampler@sha256:00be180d8577e6a686c4ae3c0fb07ba0f16218e25846b02434ddcfc340e90f27"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

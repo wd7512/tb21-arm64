@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/sqlite-db-truncate:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/sqlite-db-truncate@sha256:6c1c428fa8697931c7e4f8ea8f234241180550c9a243d1c61405e0d1c6e2ed0b"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

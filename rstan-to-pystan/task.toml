@@ -28,7 +28,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/rstan-to-pystan:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/rstan-to-pystan@sha256:17c81733012b81ff564112e655ea3ccc90a9298c503b34a0e145ceb1ed524228"
 cpus = 4
 memory_mb = 8192
 storage_mb = 10240

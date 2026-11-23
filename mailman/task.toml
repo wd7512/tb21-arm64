@@ -27,7 +27,7 @@ timeout_sec = 1800.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/mailman:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/mailman@sha256:6e2584d1bc3e1691dca3cff6dec0c3ebef0d8c82b4e45ead79f9a09e2ec9b5bf"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

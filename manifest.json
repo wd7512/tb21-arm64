@@ -3,12 +3,12 @@
   "harbor": "0.23.0",
   "tasks": {
     "adaptive-rejection-sampler": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/adaptive-rejection-sampler@sha256:00be180d8577e6a686c4ae3c0fb07ba0f16218e25846b02434ddcfc340e90f27",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/adaptive-rejection-sampler:20251031",
         "image_digest": "sha256:985bed39e8448bc95f138b5f766b59003a95c4be171c96af8e76448338f3dd8f",
@@ -18,12 +18,12 @@
       "host_ports": []
     },
     "bn-fit-modify": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/bn-fit-modify@sha256:cd5948af70f136ab6279f51c26484e2400833e650448973dbebaa4abbf925891",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/bn-fit-modify:20251031",
         "image_digest": "sha256:5aeb11ca6e802b83816c9a31f055ac9d028309a853509400c2e3139ac2d8380d",
@@ -33,11 +33,11 @@
       "host_ports": []
     },
     "break-filter-js-from-html": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/break-filter-js-from-html@sha256:683d431c68c7db693f9ec623d10fd89fab23272d2328a6c6186dbe03099d337e",
+      "image": "ghcr.io/wd7512/tb21-arm64/break-filter-js-from-html@sha256:2dc295a5404869a7734e1baa4be1dd4df9d62dd95171a3611c719e18ae1f46c1",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/break-filter-js-from-html:20251031",
@@ -48,11 +48,11 @@
       "host_ports": []
     },
     "build-cython-ext": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/build-cython-ext@sha256:ddaf5905e2902fb510ccc78652bc75139c9295ec295db4d90c027a4ea0a5d514",
+      "image": "ghcr.io/wd7512/tb21-arm64/build-cython-ext@sha256:6522070ab40f8998dc0684fbcb67b88c249ef602ccf7f10bb7c7d0ca5212c229",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/build-cython-ext:20251031",
@@ -63,12 +63,12 @@
       "host_ports": []
     },
     "build-pmars": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/build-pmars@sha256:87bbb84160e4dacbba0ef4d1ed0c7edcd6f904c4456ca88e9343fa62945b3e35",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/build-pmars:20251031",
         "image_digest": "sha256:57a82706f7491e0b2d1ff7e927e97ae5339892dd09c47ac43290b4ba1f5abc6f",
@@ -78,11 +78,11 @@
       "host_ports": []
     },
     "build-pov-ray": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/build-pov-ray@sha256:96c410f6af78e3a216d2a650429925719dc78b420c5b7446c9338e2e9bf38a83",
+      "image": "ghcr.io/wd7512/tb21-arm64/build-pov-ray@sha256:faff5f02bd276c8f540d3156e986d2192820f21abf7d6e8edc2d03892e3fbc96",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/build-pov-ray:20251031",
@@ -93,12 +93,12 @@
       "host_ports": []
     },
     "caffe-cifar-10": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/caffe-cifar-10@sha256:bc920694b813c8b0e838e253472324cd404dd870a4af65cfbcb70a1f5d451371",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/caffe-cifar-10:20260403",
         "image_digest": "sha256:929a6d631b592c82e0d0f5d4a65cf03c946dc554cfc9bb09916e82076e7d3215",
@@ -108,12 +108,12 @@
       "host_ports": []
     },
     "cancel-async-tasks": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/cancel-async-tasks@sha256:68e0f84f2f3dda218f1067d81ee67b320eb51cb7ae62fa75b8df1e27d81cfe0a",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/cancel-async-tasks:20251031",
         "image_digest": "sha256:84c7fae6b256dcc56a350790e2a9715eefc7dad662a9d8e8a472363aa71ef18d",
@@ -123,12 +123,12 @@
       "host_ports": []
     },
     "chess-best-move": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/chess-best-move@sha256:06a4812b29bc821896d03fd97588c5e964c5866a84009e92587834b19ebc9805",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/chess-best-move:20251031",
         "image_digest": "sha256:bb447f94d9e2a8ed879f85c85a514b213b7418f9fe11fd7b2428a0b0e436e647",
@@ -138,12 +138,12 @@
       "host_ports": []
     },
     "circuit-fibsqrt": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/circuit-fibsqrt@sha256:ca8b66c7c819c36873885729230a4d4efc2db0285be0a1d0736bbc599174c3f9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/circuit-fibsqrt:20251031",
         "image_digest": "sha256:29783439f529eaed2145592f15af7a2281161528860392a382c825489030ae3a",
@@ -153,12 +153,12 @@
       "host_ports": []
     },
     "cobol-modernization": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/cobol-modernization@sha256:e212ead59ba4b87e26188845b402beaad85c0862af75be198892f8050503f734",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/cobol-modernization:20251031",
         "image_digest": "sha256:593ab9df3d83f771e927888b2d9436b380cdf7ec4d0af2a9f0802d541edebba0",
@@ -168,12 +168,12 @@
       "host_ports": []
     },
     "code-from-image": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/code-from-image@sha256:e1720d4e258ade24c7b43f09a33adf1050fb3a243afac5abfb1cc9f11e55b2af",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/code-from-image:20251031",
         "image_digest": "sha256:2be9cdb746ed18c1b2b1404032efae0b2235a1b8fc479ef17730c95409d89f76",
@@ -183,12 +183,12 @@
       "host_ports": []
     },
     "compile-compcert": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/compile-compcert@sha256:2e931d4ed33547189051a20b670a9d175f5eca86b074102ab6178da5a4ae092f",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/compile-compcert:20260403",
         "image_digest": "sha256:f60236a4fe55bbb3c573210fe0fcd91551f4ee97c417453cd4985be074b35411",
@@ -198,12 +198,12 @@
       "host_ports": []
     },
     "configure-git-webserver": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/configure-git-webserver@sha256:d82afe5889432b8360ef1e77d1a14821692d02f4e9eb579d70392d7f54d5980f",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/configure-git-webserver:20251031",
         "image_digest": "sha256:9e48389b917fd4650dda1f64406bd7198bbf20dc1c6b0e5c4d81a3c16369f88c",
@@ -215,12 +215,12 @@
       ]
     },
     "constraints-scheduling": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/constraints-scheduling@sha256:e68d6d020c717982a2e4fad3cb9004c51a446c384487381b5ccfe46768f44941",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/constraints-scheduling:20251031",
         "image_digest": "sha256:567ce5a189f8d11ac461790876e934cc7af38391baf89a78f95f4dafc1fec3b0",
@@ -230,12 +230,12 @@
       "host_ports": []
     },
     "count-dataset-tokens": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/count-dataset-tokens@sha256:f8cc0071b7f7e79cb800aab1b64bd4557321988c40ed180add6d43612a779cd8",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/count-dataset-tokens:20251031",
         "image_digest": "sha256:9c513c4ba342bd95be501f6f5eadd4806a2b18749c87c251615825100130232d",
@@ -245,12 +245,12 @@
       "host_ports": []
     },
     "crack-7z-hash": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/crack-7z-hash@sha256:3219ea986539cfa8bfd7edf2d438733facec075b944a2d35077753035799546b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/crack-7z-hash:20251031",
         "image_digest": "sha256:0f4453abd774c5a3d3d7e66ba28fae88ec2e49ada3a993b324ebc16c348666d3",
@@ -260,12 +260,12 @@
       "host_ports": []
     },
     "custom-memory-heap-crash": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/custom-memory-heap-crash@sha256:81b6ed4d8fb79bb47ca8d20fdf629ef6d85cb9fbb7db8ecf07c409e6715652ff",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/custom-memory-heap-crash:20251031",
         "image_digest": "sha256:1895d7d6240d5fb2ec774d6bfdd1057d170f8d199c15c582e4585d3c63802557",
@@ -275,12 +275,12 @@
       "host_ports": []
     },
     "db-wal-recovery": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/db-wal-recovery@sha256:b44551927b3612cbd709d1ab882b411ff493b987a693e428cc4f30a17f70aedc",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/db-wal-recovery:20251031",
         "image_digest": "sha256:0e33ea5ec823975d1bd6c3778395c9f94251dd88f571146057bff6adb7e4594e",
@@ -290,12 +290,12 @@
       "host_ports": []
     },
     "distribution-search": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/distribution-search@sha256:88bc92de98f79c105c2ffe8b8cf360f14aa35bf45f1e3eddfd43d23b901c6c66",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/distribution-search:20251031",
         "image_digest": "sha256:1448f7aa1c6080488251d00350e8e90477858989b1bec0accc866d7b3220738a",
@@ -305,12 +305,12 @@
       "host_ports": []
     },
     "dna-assembly": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/dna-assembly@sha256:7a4ac746201e50408875048b30a91f53a16574833fe6b3e362ada3fdb2f9b256",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/dna-assembly:20251031",
         "image_digest": "sha256:d1adf6835f1dd91205ba70e452c699d0aea601010038e5617f370716efb50569",
@@ -320,12 +320,12 @@
       "host_ports": []
     },
     "dna-insert": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/dna-insert@sha256:f5aec967c5681081c9021b5f97a98b307831d627bce8819200926549e140a076",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/dna-insert:20251031",
         "image_digest": "sha256:4dd8760694e355de85ecf03605cb487ccdb33322f6afad513d2920829baa33b2",
@@ -335,12 +335,12 @@
       "host_ports": []
     },
     "extract-elf": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/extract-elf@sha256:2619ccdf5e655c7e89d8a54918a59958a9db3aa0d7255581fd40b15ae5bdeef3",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/extract-elf:20251031",
         "image_digest": "sha256:6932e4cb318464307eacd497ef8dc617eaf551b6a90231f815ec0b911895cfed",
@@ -350,12 +350,12 @@
       "host_ports": []
     },
     "extract-moves-from-video": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/extract-moves-from-video@sha256:0dd4b61bf6e5352dea017e5020fc913f891a805d6b88b97325affa15523702af",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/extract-moves-from-video:20260403",
         "image_digest": "sha256:74ef87375ce2b6332ca9fe0180eb541b64cf4ef4188edd5b1be22c272e5a5b4b",
@@ -365,12 +365,12 @@
       "host_ports": []
     },
     "feal-differential-cryptanalysis": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/feal-differential-cryptanalysis@sha256:914c2edb0a9c036f2a1447142c75b494b0591d4214e5b044a4fea8825aa655cf",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/feal-differential-cryptanalysis:20251031",
         "image_digest": "sha256:bea93bafe9eab601ca58729f5735a13f8339f52055322d1cf840e3742b54a287",
@@ -380,12 +380,12 @@
       "host_ports": []
     },
     "feal-linear-cryptanalysis": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/feal-linear-cryptanalysis@sha256:9f889cf231c041fe54379e1678333400b746875a21f73c967aa1f4637d61691a",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/feal-linear-cryptanalysis:20251031",
         "image_digest": "sha256:ea78749a8422c6228d26c8753f45906a6a2df089906764b7e3c3e27e8f718ee7",
@@ -395,12 +395,12 @@
       "host_ports": []
     },
     "filter-js-from-html": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/filter-js-from-html@sha256:2bbea748147789679370393e1d959e5a778e680a45308208fb5bffc649e2d4a3",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/filter-js-from-html:20251031",
         "image_digest": "sha256:92acda0f124b988036a6f426ce0bc47fac19f5efe9fc5e6ea3ea52ccb075d0a4",
@@ -410,12 +410,12 @@
       "host_ports": []
     },
     "financial-document-processor": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/financial-document-processor@sha256:7af39361de660ee541678ccd83ada3985534dc687fe5dab0cf6798b6bf99d440",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/financial-document-processor:20251031",
         "image_digest": "sha256:ef6c9cfaaf14cdd200163008a188d5baa9f626f3bfb8d3e7d6f30c08518e6251",
@@ -425,12 +425,12 @@
       "host_ports": []
     },
     "fix-code-vulnerability": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/fix-code-vulnerability@sha256:165d24f1d6bca2e06ab0c21dc7be254668d971a3e3805f3bf68b848d5d3d9364",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/fix-code-vulnerability:20251031",
         "image_digest": "sha256:cac325252991f823713b2d0441502972901dd782bd67f66c03d9b1e410dac5c0",
@@ -440,12 +440,12 @@
       "host_ports": []
     },
     "fix-git": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/fix-git@sha256:9175df7df1e783b825c65763bed0368c7b3186634a9a0c05bac9ca89b173d07a",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/fix-git:20260403",
         "image_digest": "sha256:389b9c8247610c2c5be080b1ac00429007c2c69bf57f7f26c79f0f75ba2d5c74",
@@ -455,12 +455,12 @@
       "host_ports": []
     },
     "fix-ocaml-gc": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/fix-ocaml-gc@sha256:284afafbddcd23c3cf2c86d24804571bf5666a610e2c5d3e0b702df39df1ca70",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/fix-ocaml-gc:20251031",
         "image_digest": "sha256:66a1e2293076c9ef27a118611b3089a6284fdf467fd4675592d0cce7d11e5b0b",
@@ -470,12 +470,12 @@
       "host_ports": []
     },
     "gcode-to-text": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/gcode-to-text@sha256:9c92ec8ff6a35b765744206e1ca2f6aff7a1337e6f71cb7ade82d1d0ccdb14cc",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/gcode-to-text:20251031",
         "image_digest": "sha256:0979ef40c6a3e8c4e7ab5b6c2524c74625a84799e15cd45dd98dcf83b11efd4d",
@@ -485,12 +485,12 @@
       "host_ports": []
     },
     "git-leak-recovery": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/git-leak-recovery@sha256:ff7ffb4d20c13f237015ff9afd05ca1539b57b3c850d4d3a36d9b2ae8610d1c3",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/git-leak-recovery:20251031",
         "image_digest": "sha256:62160e522a4238b8bcd522411ea97b5b200f811e5899d34947e66809bef7e586",
@@ -500,12 +500,12 @@
       "host_ports": []
     },
     "git-multibranch": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/git-multibranch@sha256:cbbab5f0676c3a53efdbd000884fc7219d0fb8f9ef2e201d43b984a7ace01e6e",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/git-multibranch:20251031",
         "image_digest": "sha256:5bc449921c138295f6ddd8dca2977319fee2ce523811dbe56cec4ca663385fb5",
@@ -518,12 +518,12 @@
       ]
     },
     "gpt2-codegolf": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/gpt2-codegolf@sha256:662928001f30dbc39ad69d575d4d641058c68a4e3360fe41fd89d9caa8748e98",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/gpt2-codegolf:20251031",
         "image_digest": "sha256:537e7bd26b02db5c761230515fa09dc05f89403c6737fbdae4b5793ebc2c7066",
@@ -533,12 +533,12 @@
       "host_ports": []
     },
     "headless-terminal": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/headless-terminal@sha256:bb592437b9218ecfd31b4e786d3adf6ce85e281a7bdfd4ec6a6cc72ec2a770fa",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/headless-terminal:20251031",
         "image_digest": "sha256:eb7e209672bf6cef2785fafd9e13509b10626c327bcc2b37f5bf40ca83eaf3aa",
@@ -550,10 +550,10 @@
       ]
     },
     "hf-model-inference": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/hf-model-inference:20260430",
         "image_digest": "sha256:0ef475aebda8abb8cbf3a1d97aee8ac4b09ca9720550e25a4a46a47930cd3bad",
@@ -565,12 +565,12 @@
       ]
     },
     "install-windows-3.11": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/install-windows-3.11@sha256:9214adae1a3c76426bca4e1067122723f868c5bb172e5ce2cc6d3588a926517b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/install-windows-3.11:20251031",
         "image_digest": "sha256:c6695097316ef8810abce0545e347e65354aef9d51d4f7f662c3242e742f6a3e",
@@ -584,12 +584,12 @@
       ]
     },
     "kv-store-grpc": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/kv-store-grpc@sha256:10c521544db3c09b2a5699385125a751afdbf60260671eb4eb38d0b87f5e4cb0",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/kv-store-grpc:20251031",
         "image_digest": "sha256:3399400800dcb207634daa42bc1b052e831e285cc9d221eea66c47bc0fc79791",
@@ -601,12 +601,12 @@
       ]
     },
     "large-scale-text-editing": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/large-scale-text-editing@sha256:1cfa41e210d0959cfa1b7442e6e7a2f1aa0b17faefb09e339b905b2ed9ee5d1c",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/large-scale-text-editing:20251031",
         "image_digest": "sha256:719adca3f1388220546ce6a155eee56eff3c4fe318183100320606a210f6b59c",
@@ -616,12 +616,12 @@
       "host_ports": []
     },
     "largest-eigenval": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/largest-eigenval@sha256:5b711f8794d912c3f53068365d2e98c538bbb03b3c0640fa357aab00e1bc77c2",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/largest-eigenval:20251031",
         "image_digest": "sha256:cb9e3e3b09d0783f3bbcfeec8d77bc32d3791204fb2be6650b19be4fbc082b2e",
@@ -631,12 +631,12 @@
       "host_ports": []
     },
     "llm-inference-batching-scheduler": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/llm-inference-batching-scheduler@sha256:d5a22c5576e1f2a9ee9a9bc9f7bfa5e788125dda83a645ce524a1264e31497b5",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/llm-inference-batching-scheduler:20251031",
         "image_digest": "sha256:19e79aa49be4e55dccca1dde966515ebe6852314b6010bcb9230afb48b996774",
@@ -646,12 +646,12 @@
       "host_ports": []
     },
     "log-summary-date-ranges": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/log-summary-date-ranges@sha256:c036e2d50c69619bbfe38e816b5e058ee917aae27bbfa4d6eac4339cff901fd9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/log-summary-date-ranges:20251031",
         "image_digest": "sha256:cbeb6ba905c2fec294f16cd5e16e3ea7f2e04d38ac2484d51a11de262aa7dc51",
@@ -661,12 +661,12 @@
       "host_ports": []
     },
     "mailman": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/mailman@sha256:6e2584d1bc3e1691dca3cff6dec0c3ebef0d8c82b4e45ead79f9a09e2ec9b5bf",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/mailman:20251031",
         "image_digest": "sha256:04fac73db7e2b4f49d43f09fbc2266a94d70131f07efa1393d370abc059f4094",
@@ -679,11 +679,11 @@
       ]
     },
     "make-doom-for-mips": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44846182481",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
+      "image": "ghcr.io/wd7512/tb21-arm64/make-doom-for-mips@sha256:8f9bd407ee63ea3d71a9ee8e702059a7cdef24036e259205e0ce652b16c5a40f",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/make-doom-for-mips:20251031",
@@ -694,11 +694,11 @@
       "host_ports": []
     },
     "make-mips-interpreter": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44846182481",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
+      "image": "ghcr.io/wd7512/tb21-arm64/make-mips-interpreter@sha256:c2d096d05dacaca69877a86dd484fc1d770f77cc7ee91efe462e0158ff264794",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/make-mips-interpreter:20251031",
@@ -709,11 +709,11 @@
       "host_ports": []
     },
     "mcmc-sampling-stan": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/mcmc-sampling-stan@sha256:6ae8faf9ab9b7c9636b1f0e0ca6a2aa7389b00a6130ffa16faf36392263d6de2",
+      "image": "ghcr.io/wd7512/tb21-arm64/mcmc-sampling-stan@sha256:b9b1ce3bccb767bf826c042555e54ac9143c61538b087402a15e27e91ad3fb7e",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/mcmc-sampling-stan:20251031",
@@ -724,12 +724,12 @@
       "host_ports": []
     },
     "merge-diff-arc-agi-task": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/merge-diff-arc-agi-task@sha256:9ed7e0275e6aff7b629e298c3bf641d943815a6c687145c4348e70243a4ae8c9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/merge-diff-arc-agi-task:20251031",
         "image_digest": "sha256:bfc2a235f2ceea64ffb1ffc5529c2acebf570bff61f3668f0e5669ef570c17d4",
@@ -739,12 +739,12 @@
       "host_ports": []
     },
     "model-extraction-relu-logits": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/model-extraction-relu-logits@sha256:8d6703d69760fabc86a5df7fbdd9a976c486c7bef413b5044240d7d05a63d6c4",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/model-extraction-relu-logits:20251031",
         "image_digest": "sha256:52fe1f089f38650f0dc22d7531ee6e01ebd526de1b349aaa2ecb331dca9fabce",
@@ -754,12 +754,12 @@
       "host_ports": []
     },
     "modernize-scientific-stack": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/modernize-scientific-stack@sha256:faa59eb656354e1a02d39fb174881936bf1f51cf80a528576b7c92f62479ee67",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/modernize-scientific-stack:20251031",
         "image_digest": "sha256:64e69cee13bf6b0b9016e735b51891bce996a60f1e2d1a005bf12c949e221d71",
@@ -769,10 +769,10 @@
       "host_ports": []
     },
     "mteb-leaderboard": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/mteb-leaderboard:20260430",
         "image_digest": "sha256:a8538f4882ff132e0a20a75be3fffc07164318a7425ad19a6b4bf5268107feb4",
@@ -782,7 +782,7 @@
       "host_ports": []
     },
     "mteb-retrieve": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [],
       "image": null,
       "status": "verified-ci",
@@ -795,12 +795,12 @@
       "host_ports": []
     },
     "multi-source-data-merger": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/multi-source-data-merger@sha256:45f172c05a74dd7a7aaf0ed63ff8812b64c2a882cccb0024db159d1beff1ec18",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/multi-source-data-merger:20251031",
         "image_digest": "sha256:8b32782078ff7383a1b4e5d3cecca8ce287e30f50bb4c0e5db009a18064e666e",
@@ -810,12 +810,12 @@
       "host_ports": []
     },
     "nginx-request-logging": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/nginx-request-logging@sha256:c1ad98c459540142044e1af8b259f1798a27e760c814f0d2be04fdc0ab222aa6",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/nginx-request-logging:20251031",
         "image_digest": "sha256:693e64431a0dbf45952e8b91a298d54fd60247e501c6623fb8fa3ebc07fc3d3d",
@@ -827,12 +827,12 @@
       ]
     },
     "openssl-selfsigned-cert": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/openssl-selfsigned-cert@sha256:58a08792b91995546d932b9ea6f578d171f93e7c00e9c3bfb00403b2fac7dbc3",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/openssl-selfsigned-cert:20251031",
         "image_digest": "sha256:4c948a4e630af2435ae0a19108fc0814a946ac2fa29a512469e0fc77b38c8c12",
@@ -842,12 +842,12 @@
       "host_ports": []
     },
     "overfull-hbox": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/overfull-hbox@sha256:f8e715dc4e4a42fb008d25a9792b0a98b163c05fd1a10ff94346015d9b8f999e",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/overfull-hbox:20260403",
         "image_digest": "sha256:7dca952bb6736194a736b5110945f48842eafa8551e24468f1dddeed0daee799",
@@ -857,12 +857,12 @@
       "host_ports": []
     },
     "password-recovery": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/password-recovery@sha256:334451b1841c40e136be0261b9238570b24e19234ea06c1dd500fb5fa93ba50b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/password-recovery:20251031",
         "image_digest": "sha256:15fcd84bf3b06270ee148211cc6da6599b13ec2f41ac1d0894cf75c2225872ee",
@@ -872,12 +872,12 @@
       "host_ports": []
     },
     "path-tracing": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/path-tracing@sha256:fad6a6d5e504ce36f2915026fbefb7717b04a78b9b9b3a69bb50f5a1ac0e2cd0",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/path-tracing:20251031",
         "image_digest": "sha256:4b44725102cd627dfa895191a5a30d16dae3c5623bb43da6459f79135db6b482",
@@ -887,12 +887,12 @@
       "host_ports": []
     },
     "path-tracing-reverse": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/path-tracing-reverse@sha256:fe440d038174b888c8b57f3cf80762eefc159dd159a7cdc34839b6fe61aa51d2",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/path-tracing-reverse:20251031",
         "image_digest": "sha256:7911e42479d8f6d8af1248bc52442a0efbc5a33e3ecf535fdc20d252a2c64142",
@@ -902,12 +902,12 @@
       "host_ports": []
     },
     "polyglot-c-py": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/polyglot-c-py@sha256:5d15f9d2f1d1228c6dbf62ac08aecfac195840c309fc31ba1d7124c2c998d21d",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/polyglot-c-py:20251031",
         "image_digest": "sha256:0f1c3b7816d70cf5551573fd6aeef76893f2ae3000be2419997b6871b5d987ed",
@@ -917,12 +917,12 @@
       "host_ports": []
     },
     "polyglot-rust-c": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/polyglot-rust-c@sha256:78a93b2d7db5513fdbf1bc5f74ec3a37fc991086d13ced1e6960b5f9d54a8436",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/polyglot-rust-c:20251031",
         "image_digest": "sha256:3ba84f0e138a4b65e58c53f920a0fc852571e6402901c3bdbb876e9dab6e6c5e",
@@ -932,12 +932,15 @@
       "host_ports": []
     },
     "portfolio-optimization": {
-      "evidence": null,
+      "evidence": {
+        "run": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
+        "reason": "oracle run 1 reward 0.0"
+      },
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/portfolio-optimization@sha256:6c213346afbd8dfec33b34b73bb506a717d9ba90d2422a99b61ec380411dc9c1",
+      "status": "failing",
       "upstream": {
         "image": "alexgshaw/portfolio-optimization:20251031",
         "image_digest": "sha256:93461db3cec697c31585941a3b9387c1398495aa1ff0aee2ac752c7230b50ef8",
@@ -947,11 +950,11 @@
       "host_ports": []
     },
     "protein-assembly": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44894548466",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/protein-assembly@sha256:5a209dbe0e18c43d8b806ea027938e179c6cfc3ec765f092d00abd44591e2c1f",
+      "image": "ghcr.io/wd7512/tb21-arm64/protein-assembly@sha256:ffaee7b3de9d2e5696df4149c976e905bf3a545c48fc7b787917e1c5e12f4d71",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/protein-assembly:20260403",
@@ -962,12 +965,12 @@
       "host_ports": []
     },
     "prove-plus-comm": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/prove-plus-comm@sha256:e1a1b777ff47b41eceddea72e65f43f62becc81b3f5537d43efd2fd781cea873",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/prove-plus-comm:20251031",
         "image_digest": "sha256:e26741d01681a9da1beeff8b7b7b65fe2b921b8b122a306a3707a81ebd051f73",
@@ -977,12 +980,12 @@
       "host_ports": []
     },
     "pypi-server": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/pypi-server@sha256:a42235c10d1d005e59885284845ac7d07a487adfc3f1578a68d7ad96f797a97e",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/pypi-server:20251031",
         "image_digest": "sha256:d18bb30f47c7dcaa3acdbc31ac7413c98eadca2ea16540bbd380f2f063b95276",
@@ -994,12 +997,12 @@
       ]
     },
     "pytorch-model-cli": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/pytorch-model-cli@sha256:d0a28554df1f4be65c18e6943725ac7d92bcf3d8cdb85f42724c79380aefc9dd",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/pytorch-model-cli:20251031",
         "image_digest": "sha256:c996884b5fb5fb2c0c07d67da2c4f974f271f07234ed28e1a868240375c57a67",
@@ -1009,10 +1012,10 @@
       "host_ports": []
     },
     "pytorch-model-recovery": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [],
       "image": null,
-      "status": "untested",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/pytorch-model-recovery:20260430",
         "image_digest": "sha256:7c2bb52851cef25bdc3939e473496d25fbf11fd0cb7ab58bcf3cefcb751cdc0e",
@@ -1058,12 +1061,12 @@
       ]
     },
     "query-optimize": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/query-optimize@sha256:cbe91f81317eaea0c6322ff4339358335680377005a2b97cafae927f4d555bf2",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/query-optimize:20251031",
         "image_digest": "sha256:28de7da87004eab5b29bd5eaf1823579bc5b73ccea4b80349a5623185770da14",
@@ -1073,12 +1076,12 @@
       "host_ports": []
     },
     "raman-fitting": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/raman-fitting@sha256:659556211313c8a1fd83fba1ff213d2dfb3bb24ec16ee4fe8da6e9b43a35b422",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/raman-fitting:20251031",
         "image_digest": "sha256:401fa95d5d491f44a473eda9d2c52930f9565cc889c796eabcb6e20fec26852e",
@@ -1088,12 +1091,12 @@
       "host_ports": []
     },
     "regex-chess": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/regex-chess@sha256:4a1b697c6b6380e12bc36a7482489ad45eb6dc844452d4a9f5b1d22f4bedb63e",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/regex-chess:20251031",
         "image_digest": "sha256:e3b6d61d2d3930fbbdc5f7bf091a7f8b7f6125e1951ef8a7dbe165b1ef62942c",
@@ -1103,11 +1106,11 @@
       "host_ports": []
     },
     "regex-log": {
-      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44867539079",
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/regex-log@sha256:74d55fc078564de2c3f934f52433e3d56959afc02f837d8bf92c2fe119ba8bb2",
+      "image": "ghcr.io/wd7512/tb21-arm64/regex-log@sha256:cdffc11cf3ce80c15f649604ebf7cf0d8b6b696797b2da6290415d0cd6981154",
       "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/regex-log:20251031",
@@ -1118,12 +1121,12 @@
       "host_ports": []
     },
     "reshard-c4-data": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/reshard-c4-data@sha256:76384422a2ff71d35db7d9737929de1ec5e84244c61664a6cce6f3c0e6414209",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/reshard-c4-data:20251031",
         "image_digest": "sha256:92d209e704785e17ad6b3f740e813dd72bc7ac33982ce435d197ab9d890eac2a",
@@ -1133,12 +1136,15 @@
       "host_ports": []
     },
     "rstan-to-pystan": {
-      "evidence": null,
+      "evidence": {
+        "run": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
+        "reason": "oracle run 1 reward 0.0"
+      },
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/rstan-to-pystan@sha256:17c81733012b81ff564112e655ea3ccc90a9298c503b34a0e145ceb1ed524228",
+      "status": "failing",
       "upstream": {
         "image": "alexgshaw/rstan-to-pystan:20251031",
         "image_digest": "sha256:b23d48839408524326095c15ada4145c772b87646cf299022ff1f58c97baba91",
@@ -1148,12 +1154,12 @@
       "host_ports": []
     },
     "sam-cell-seg": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/sam-cell-seg@sha256:c55ea6f41c85cac8ed4676bbba599e640ae9b7622645a6b33e8de417239426ff",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/sam-cell-seg:20251031",
         "image_digest": "sha256:d76bdeef19d8113f4094013249c982eca93e62e46130484846269b2d378879d0",
@@ -1163,12 +1169,12 @@
       "host_ports": []
     },
     "sanitize-git-repo": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/sanitize-git-repo@sha256:54bee8d3c22d9d86633d43982d9bea58219028bb3b36fd6c886b327fedae18bf",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/sanitize-git-repo:20251031",
         "image_digest": "sha256:4b5234da5bb0d67f3b0bf8db40a2883c07a5219f62b64c2bf9ff1ac84cd0f672",
@@ -1178,12 +1184,12 @@
       "host_ports": []
     },
     "schemelike-metacircular-eval": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/schemelike-metacircular-eval@sha256:b5dc282c5c59b22ebe84914c6f6c5fa05edfcc867e1f4828ff234e4a98240ee9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/schemelike-metacircular-eval:20251031",
         "image_digest": "sha256:b485be38bf80d56c1a4cd9da95bbf7ec129dc03f6786b86c0525518a96f6d1db",
@@ -1193,12 +1199,12 @@
       "host_ports": []
     },
     "sparql-university": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/sparql-university@sha256:c090a76f4d032998e24454980356c9424dbed35135dfd523284c0624e8161659",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/sparql-university:20251031",
         "image_digest": "sha256:92fa4304e51167f9fb4466144eba33ef9272a7df0ac1cab9fc3986bccd1ab708",
@@ -1208,12 +1214,12 @@
       "host_ports": []
     },
     "sqlite-db-truncate": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/sqlite-db-truncate@sha256:6c1c428fa8697931c7e4f8ea8f234241180550c9a243d1c61405e0d1c6e2ed0b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/sqlite-db-truncate:20251031",
         "image_digest": "sha256:aabac93c93bd1f310e6a6fb893911d7735026ed18491c72133c9196a09092ca4",
@@ -1223,12 +1229,12 @@
       "host_ports": []
     },
     "sqlite-with-gcov": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/sqlite-with-gcov@sha256:886dade86508bd6cd69967c001ade01db59f295155178338e08e3a8cbedf820f",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/sqlite-with-gcov:20251031",
         "image_digest": "sha256:f986820b00c74ce75db7288719d364df313fde7c7917bea6eb6352a08431a89f",
@@ -1238,12 +1244,12 @@
       "host_ports": []
     },
     "torch-pipeline-parallelism": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/torch-pipeline-parallelism@sha256:6576b3f086a8508a3f9bd83bd488522beb3b6b44e8bc3490b8d8d14802fbcf07",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/torch-pipeline-parallelism:20251031",
         "image_digest": "sha256:3cb7b39d86f1704b20e668851da0b08b34b3270c01d583f136d65190984a8d1b",
@@ -1253,12 +1259,15 @@
       "host_ports": []
     },
     "torch-tensor-parallelism": {
-      "evidence": null,
+      "evidence": {
+        "run": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
+        "reason": "oracle run 1 exception VerifierTimeoutError"
+      },
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/torch-tensor-parallelism@sha256:ff8a0cd6bd7ec0b2d323d36a472b9cf9fdb6643749931b5b6fd44bce95de335e",
+      "status": "failing",
       "upstream": {
         "image": "alexgshaw/torch-tensor-parallelism:20251031",
         "image_digest": "sha256:c50ac169e11465f41b49749fe87e4487f24d31a0c39c0906cd3242cc5499c690",
@@ -1268,12 +1277,12 @@
       "host_ports": []
     },
     "train-fasttext": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/train-fasttext@sha256:95c9cc2ecd20e3d4772b94acba2c45a8d932571503c1f77545422dcfc78a3995",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/train-fasttext:20251031",
         "image_digest": "sha256:3c77da9617e7fa577de04aef73fb1ac3114be32d7ffef72609c83929d842b157",
@@ -1283,12 +1292,12 @@
       "host_ports": []
     },
     "tune-mjcf": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/tune-mjcf@sha256:4a6ed380e68876116d03e6cd71b8a4cbacfdcf84a543db283746b8b2b5e1a70a",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/tune-mjcf:20251031",
         "image_digest": "sha256:56c197739db2db79562384581fcc9d3d71e6c171bf052104b1a7ee0282e7c3cf",
@@ -1298,12 +1307,12 @@
       "host_ports": []
     },
     "video-processing": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/video-processing@sha256:f10d892b43e44f04365345bb37da9b0c78b571cc9777ca3a05ff181c4aa1907b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/video-processing:20251031",
         "image_digest": "sha256:a2c0f39e3ab04e67ac6e49cad9167bb0d987babe32511768c01aa0c6905a875f",
@@ -1313,12 +1322,12 @@
       "host_ports": []
     },
     "vulnerable-secret": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/vulnerable-secret@sha256:4644097d8c34c234bc120a8cc617fdca93edbfaf398e86b7fa0b13569c0079a5",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/vulnerable-secret:20251031",
         "image_digest": "sha256:61ebb40454dd103aa2f7e71ad6dafd91cf2b301e6bb07e69d5b472412d1ee15b",
@@ -1328,12 +1337,12 @@
       "host_ports": []
     },
     "winning-avg-corewars": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/winning-avg-corewars@sha256:ee6d6068d88e9b0ab956098f34cf55fdf718015c5a299b848e4ac1a818858b8b",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/winning-avg-corewars:20251031",
         "image_digest": "sha256:ad7a6b1c53aed59e10916c692aa7e2ae00042a4283187430aee1e3e79f72d5c6",
@@ -1343,12 +1352,12 @@
       "host_ports": []
     },
     "write-compressor": {
-      "evidence": null,
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/44895589286",
       "fix_classes": [
         "drift"
       ],
-      "image": null,
-      "status": "untested",
+      "image": "ghcr.io/wd7512/tb21-arm64/write-compressor@sha256:22552eec6159cd8f8d01ec3ed2e006478151ca2810c8bbdab5bf2b41bfb3c5d9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/write-compressor:20251031",
         "image_digest": "sha256:3618e1f8a997b437c09cd3dbaac736705809c05f6f12f584b65722175970ebe1",
