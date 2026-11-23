@@ -1028,15 +1028,12 @@
       "host_ports": []
     },
     "qemu-alpine-ssh": {
-      "evidence": {
-        "run": "https://github.com/wd7512/tb21-arm64/actions/runs/45212783923",
-        "reason": "oracle run 3 reward 0.0"
-      },
+      "evidence": "https://github.com/wd7512/tb21-arm64/actions/runs/45212783923",
       "fix_classes": [
         "drift"
       ],
-      "image": "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:d93961fae3a60a3d7ca7ecc251cb72c2db5554f1305d44aa501256373d70633f",
-      "status": "failing",
+      "image": "ghcr.io/wd7512/tb21-arm64/qemu-alpine-ssh@sha256:e37e14322fc8c36b9e2cf1672ebbe5971bc84f5b10edcc6a3dc1d33d343af0a9",
+      "status": "verified-ci",
       "upstream": {
         "image": "alexgshaw/qemu-alpine-ssh:20251031",
         "image_digest": "sha256:541e8214a8c4faa7b556531b899d45da21048fa2ca6dd328d8cb6c4cffa8e964",
