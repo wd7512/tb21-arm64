@@ -1,0 +1,6 @@
+# qemu-alpine-ssh
+
+- **Class:** drift (moved archive).
+- **Change:** `environment/Dockerfile` rewrites `/etc/apt/sources.list` straight after `FROM`, so that `bullseye-security` points at `http://archive.debian.org/debian-security` instead of `http://deb.debian.org/debian-security`. The tests, the solution and `instruction.md` are unchanged.
+- **Why:** `tests/test.sh` runs `apt-get update` and then `apt-get install -y curl sshpass`. Debian 11 is past the end of long-term support, and its security packages have moved to `archive.debian.org`. `deb.debian.org` still serves the `bullseye-security` index, which lists `curl 7.74.0-1.3+deb11u16`, but returns 404 for the package files. `curl` never installs, so the verifier cannot install `uv` and scores 0 whatever the agent did. This happens on amd64 too, with the unmodified upstream image.
+- **Evidence (23 Nov 2026):** `deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3+deb11u16_amd64.deb` returns 404, and the same path on `archive.debian.org` returns 200. The unmodified upstream image on an x86_64 HPC node: the oracle boots Alpine, then the verifier stops with `404 Not Found` for `libnghttp2-14`, `libcurl4` and `curl`, and `/tests/test.sh: line 8: curl: command not found`; reward 0.0 in two separate runs. With the change, on an arm64 build: oracle 1.0 (1 passed) and nop 0.0.

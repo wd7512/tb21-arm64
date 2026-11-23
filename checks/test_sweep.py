@@ -13,6 +13,15 @@ SINGLE_ARCH = "regex-log"
 MULTI_ARCH = "mteb-retrieve"
 
 
+def skip_task(monkeypatch, tmp_path, task):
+    manifest = json.loads(json.dumps(MANIFEST))
+    manifest["tasks"][task]["status"] = "skipped"
+    root = tmp_path / "root"
+    root.mkdir()
+    (root / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    monkeypatch.setattr(sweep, "ROOT", root)
+
+
 def recorder(returncode=0):
     calls = []
 
@@ -129,18 +138,20 @@ def test_default_sweep_excludes_skipped_tasks(monkeypatch, tmp_path):
         captured["tasks"] = tasks
         return []
 
+    skip_task(monkeypatch, tmp_path, SINGLE_ARCH)
     monkeypatch.setattr(sweep, "sweep", fake_sweep)
     assert sweep.main(["--out", str(tmp_path)]) == 0
-    assert "qemu-alpine-ssh" not in captured["tasks"]
-    assert "qemu-startup" not in captured["tasks"]
+    assert SINGLE_ARCH not in captured["tasks"]
+    assert MULTI_ARCH in captured["tasks"]
 
 
 def test_explicit_skipped_task_is_rejected(monkeypatch, tmp_path):
     import pytest
 
+    skip_task(monkeypatch, tmp_path, SINGLE_ARCH)
     monkeypatch.setattr(sweep, "sweep", lambda *args, **kwargs: [])
     with pytest.raises(SystemExit) as error:
-        sweep.main(["qemu-startup", "--out", str(tmp_path)])
+        sweep.main([SINGLE_ARCH, "--out", str(tmp_path)])
     assert error.value.code == 2
 
 
