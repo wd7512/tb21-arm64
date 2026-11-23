@@ -26,7 +26,7 @@ timeout_sec = 900.0
 
 [environment]
 build_timeout_sec = 600.0
-docker_image = "alexgshaw/qemu-startup:20251031"
+docker_image = "ghcr.io/wd7512/tb21-arm64/qemu-startup@sha256:9016509713f2dafc4b10814b2972f06a8d8fb6d2be019f919a81359b2270996c"
 cpus = 1
 memory_mb = 4096
 storage_mb = 10240
