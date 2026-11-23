@@ -55,6 +55,10 @@ echo "=== Building and installing httpstan from source ==="
 HTTPSTAN_VERSION=4.13.0
 git clone --depth 1 --branch ${HTTPSTAN_VERSION} https://github.com/stan-dev/httpstan.git /tmp/httpstan
 make -C /tmp/httpstan -j"$(nproc)"
+if [ "$(uname -m)" = "aarch64" ]; then
+    curl -fL --retry 5 --retry-delay 2 --retry-all-errors https://github.com/stan-dev/stanc3/releases/download/v2.35.0/linux-arm64-stanc -o /tmp/httpstan/httpstan/stanc
+    chmod 755 /tmp/httpstan/httpstan/stanc
+fi
 
 python -m pip install "poetry~=1.8"
 cd /
